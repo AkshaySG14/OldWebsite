@@ -1,0 +1,294 @@
+<pre><code class="language-markup">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+    &lt;head&gt;
+        &lt;meta charset="UTF-8"&gt;
+        &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+        &lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
+        &lt;title&gt;Document Encryptor&lt;/title&gt;
+        &lt;script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"&gt;&lt;/script&gt;
+        &lt;script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"&gt;&lt;/script&gt;
+        &lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"&gt;&lt;/script&gt;
+        &lt;script src="https://npmcdn.com/tether@1.2.4/dist/js/tether.min.js"&gt;&lt;/script&gt;
+        &lt;script src="Static/js/bootstrap.min.js"&gt;&lt;/script&gt;
+        &lt;script src="Static/js/prism.js"&gt;&lt;/script&gt;
+        &lt;script src="Static/js/jquery.waypoints.min.js"&gt;&lt;/script&gt;
+        &lt;script src="Static/js/underscore-min.js"&gt;&lt;/script&gt;
+        &lt;link href="Static/css/bootstrap.min.css" rel="stylesheet"&gt;
+        &lt;link href="Static/css/font-awesome.min.css" rel="stylesheet"&gt;
+        &lt;link href="Static/css/main.css" rel="stylesheet"&gt;
+        &lt;link href="Static/css/prism.css" rel="stylesheet"&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;!-- This is the navigation bar located at the top of the screen. It serves as a way for users to navigate to different web pages. Note
+        the usage of ID's for the stylesheet --&gt;
+        &lt;div id="summary"&gt;
+            &lt;nav class="navbar navbar-toggleable-md navbar-inverse bg-inverse fixed-top" id="main-navbar"&gt;
+                &lt;button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation"&gt;
+                    &lt;span class="navbar-toggler-icon"&gt;&lt;/span&gt;
+                &lt;/button&gt;
+                &lt;div class="collapse navbar-collapse" id="navbar"&gt;
+                    &lt;p class="navbar-brand"&gt;Apps&lt;/p&gt;
+                    &lt;ul class="navbar-nav mr-auto"&gt;
+                        &lt;li class="nav-item"&gt;
+                            &lt;a class="nav-link" href="index.html"&gt;Home&lt;/a&gt;
+                        &lt;/li&gt;
+                        &lt;li class="nav-item"&gt;
+                            &lt;a class="nav-link" href="Memori.html"&gt;Memori&lt;/a&gt;
+                        &lt;/li&gt;
+                        &lt;li class="nav-item"&gt;
+                            &lt;a class="nav-link" href="MagneticMotionDemo.html"&gt;Magnetic Motion Demo&lt;/a&gt;
+                        &lt;/li&gt;
+                        &lt;li class="nav-item"&gt;
+                            &lt;a class="nav-link" href="PixelKnight.html"&gt;Pixel Knight&lt;/a&gt;
+                        &lt;/li&gt;
+                        &lt;li class="nav-item"&gt;
+                            &lt;a class="nav-link" href="DarkAndLight.html"&gt;Dark and Light&lt;/a&gt;
+                        &lt;/li&gt;
+                        &lt;li class="nav-item"&gt;
+                            &lt;a class="nav-link" href="FatesReprise.html"&gt;Fate's Reprise&lt;/a&gt;
+                        &lt;/li&gt;
+                        &lt;li class="nav-item"&gt;
+                            &lt;a class="nav-link" href="ColorSynthesizer.html"&gt;Color Synthesizer&lt;/a&gt;
+                        &lt;/li&gt;
+                        &lt;li class="nav-item active"&gt;
+                            &lt;a class="nav-link" href="DocumentEncryptor.html"&gt;Document Encryptor&lt;/a&gt;
+                        &lt;/li&gt;
+                        &lt;li class="nav-item"&gt;
+                            &lt;a class="nav-link" href="FileEncryptor.html"&gt;File Encryptor&lt;/a&gt;
+                        &lt;/li&gt;
+                        &lt;li class="nav-item"&gt;
+                            &lt;a class="nav-link" href="TrafficDirector.html"&gt;Traffic Director&lt;/a&gt;
+                        &lt;/li&gt;
+                        &lt;li class="nav-item"&gt;
+                            &lt;a class="nav-link" href="SpaceShooter.html"&gt;Space Shooter&lt;/a&gt;
+                        &lt;/li&gt;
+                    &lt;/ul&gt;
+                &lt;/div&gt;
+            &lt;/nav&gt;
+        &lt;/div&gt;
+
+        &lt;div class="container-fluid"&gt;
+            &lt;div class="row"&gt;
+                &lt;!--Side Navbar--&gt;
+                &lt;div class="col-md-2 hidden-sm-down bg-faded"&gt;
+                    &lt;nav class="sidebar"&gt;
+                        &lt;ul class="nav nav-pills flex-column"&gt;
+                            &lt;br/&gt;
+                            &lt;li class="nav-item active" id="summary-pill"&gt;
+                                &lt;a class="nav-link" id="summary-link"&gt;Summary&lt;/a&gt;
+                            &lt;/li&gt;
+                            &lt;li class="nav-item" id="screenshots-pill"&gt;
+                                &lt;a class="nav-link" id="screenshots-link"&gt;Screenshots&lt;/a&gt;
+                            &lt;/li&gt;
+                            &lt;li class="nav-item" id="code-pill"&gt;
+                                &lt;a class="nav-link" id="code-link"&gt;Source Code&lt;/a&gt;
+                            &lt;/li&gt;
+                            &lt;li class="nav-item" id="downloads-pill"&gt;
+                                &lt;a class="nav-link" id="downloads-link"&gt;Downloads&lt;/a&gt;
+                            &lt;/li&gt;
+                        &lt;/ul&gt;
+                    &lt;/nav&gt;
+                &lt;/div&gt;
+                &lt;div class="col-md-10"&gt;
+                    &lt;br/&gt;
+                    &lt;h1&gt;
+                        Document Encryptor
+                    &lt;/h1&gt;
+                    &lt;p&gt;
+                        Document Encryptor is a mac based application that allows the user to encrypt a text file (in the format txt) using
+                        one of three ciphers. These ciphers are old ciphers and are not meant to represent new techniques, but are merely
+                        applications of very basic cryptology methods. The ciphers are: the Playfair Cipher, the Hill Cipher, and the Double
+                        Columnar Transposition Cipher. Each of these ciphers can be selected to encrypt the text document, and additionally
+                        the Double Columnar Transposition Cipher can be combined with the other two to create an even more complex cipher.
+                        The program also decrypts any files it has encrypted in the past. The user need not even select which cipher to
+                        decrypt with; the program figures this out by itself. For encryption, the program simply requires the user to input
+                        the file location, and which cipher to use. For decryption, the user need only enter the location of the file that
+                        needs to be decrypted.
+                        &lt;br/&gt;&lt;br/&gt;
+                        The application was created in Xcode, and written in C++ as a way to familiarize myself with cryptology. Though
+                        written completely in C++, the code is built on the SFML, which provided the necessary functions for the
+                        code to work. Regardless, anyone versed in C++ would be able to easily examine the code.
+                        &lt;br/&gt;&lt;br/&gt;
+                        To launch the application, a mac with the latest OS is required. The application itself can be launched immediately
+                        once downloaded. It requires a mouse/trackpad and a keyboard to operate. The user should be able to easily navigate
+                        through the UI to interact with the application. Note that the full file path of the document should be entered. For
+                        example: /Users/akshaysubramaniam/Documents/Example.txt.
+                        &lt;br/&gt;&lt;br/&gt;
+                        Note that some symbols will NOT work with the program. These are symbols such as ["], ['], or [~]. Symbols like
+                        [.], [,], and all shift+number keys will work. In creating a text file, the user is advised to use a minimal amount
+                        of symbols. If a error should crash the program, it will most likely result from the usage of an illegal symbol.
+                        &lt;br/&gt;&lt;br/&gt;
+                        NOTE: This application can only be downloaded on Mac Operating Systems.
+                    &lt;/p&gt;
+
+                    &lt;br/&gt;
+
+                    &lt;h3&gt;
+                        How and Why Document Encryptor Was Made
+                    &lt;/h3&gt;
+
+                    &lt;p&gt;
+                        After finishing Color Synthesizer, I began to develop an interest in developing more mathematically heavy applications
+                        in C++. Research led me to learing about crytography, which I began to take an active interest in. As a result, I
+                        started to code in C++ the beginnings of a crytography application. My initial desire was to implement a modern
+                        crytography application, but I later opted to do a simpler application to get the basics of crytography down. This
+                        was the motivation behind the creation of the Document Encryptor app, which uses primitive cryptographic methods to
+                        encrypt text strings.
+                        &lt;br/&gt;&lt;br/&gt;
+                        Document Encryptor is entirely written in C++, and only differs from the basic language in that it uses the SFML for rendering purposes. However, the code can very easily be understood by someone versed in C++, and
+                        simply uses basic logic for the majority of its functions.
+                        &lt;br/&gt;
+                    &lt;/p&gt;
+
+                    &lt;hr id="screenshots"/&gt;
+
+                    &lt;!-- These images serve as screenshots of the application for the user to look at --&gt;
+                    &lt;h2&gt;Screenshots&lt;/h2&gt;
+                    &lt;div class="row"&gt;
+                        &lt;div class="col-sm-4"&gt;
+                            &lt;img src="Static/Assets/DocumentEncryptor/documentencryptorscreen1.png" class="img-thumbnail" alt="Document Encryptor Screenshot One"&gt;
+                        &lt;/div&gt;
+                        &lt;div class="col-sm-4"&gt;
+                            &lt;img src="Static/Assets/DocumentEncryptor/documentencryptorscreen2.png" class="img-thumbnail" alt="Document Encryptor Screenshot Two"&gt;
+                        &lt;/div&gt;
+                        &lt;div class="col-sm-4"&gt;
+                            &lt;img src="Static/Assets/DocumentEncryptor/documentencryptorscreen3.png" class="img-thumbnail" alt="Document Encryptor Screenshot Three"&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;div class="row"&gt;
+                        &lt;div class="col-sm-4"&gt;
+                            &lt;img src="Static/Assets/DocumentEncryptor/documentencryptorscreen4.png" class="img-thumbnail" alt="Document Encryptor Screenshot Four"&gt;
+                        &lt;/div&gt;
+                        &lt;div class="col-sm-4"&gt;
+                            &lt;img src="Static/Assets/DocumentEncryptor/documentencryptorscreen5.png" class="img-thumbnail" alt="Document Encryptor Screenshot Five"&gt;
+                        &lt;/div&gt;
+                        &lt;div class="col-sm-4"&gt;
+                            &lt;img src="Static/Assets/DocumentEncryptor/documentencryptorscreen6.png" class="img-thumbnail" alt="Document Encryptor Screenshot Six"&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+
+                    &lt;hr id="code"&gt;
+
+                    &lt;!-- Gives the source code for Document Encryptor --&gt;
+                    &lt;h2&gt;Document Encryptor Source Code&lt;/h2&gt;
+                    &lt;div&gt;
+                        &lt;!-- These are the buttons that change the tabs for the source code. By clicking a button, the user will change what source code is displayed. This is achieved by jQuery --&gt;
+                        &lt;div class="dropdown"&gt;
+                            &lt;button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"&gt;
+                                TextEncryptor.cpp
+                            &lt;/button&gt;
+                            &lt;div class="dropdown-menu" aria-labelledby="dropdownMenuButton"&gt;
+                                &lt;a class="dropdown-item" data-val="0"&gt;TextEncryptor.cpp&lt;/a&gt;
+                                &lt;a class="dropdown-item" data-val="1"&gt;TextEncryptor.h&lt;/a&gt;
+                                &lt;a class="dropdown-item" data-val="2"&gt;Encryptor.cpp&lt;/a&gt;
+                                &lt;a class="dropdown-item" data-val="3"&gt;Decryptor.cpp&lt;/a&gt;
+                                &lt;a class="dropdown-item" data-val="4"&gt;Cipher.cpp&lt;/a&gt;
+                                &lt;a class="dropdown-item" data-val="5"&gt;PlayfairCipher.cpp&lt;/a&gt;
+                                &lt;a class="dropdown-item" data-val="6"&gt;HillCipher.cpp&lt;/a&gt;
+                                &lt;a class="dropdown-item" data-val="7"&gt;ColumnarTransposition.cpp&lt;/a&gt;
+                                &lt;a class="dropdown-item" data-val="8"&gt;ThreeByOneMatrix.cpp&lt;/a&gt;
+                                &lt;a class="dropdown-item" data-val="9"&gt;ThreeByThreeMatrix.cpp&lt;/a&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                        &lt;!-- This is where the actual source code is displayed. The source code is displayed via jQuery injectin of the corresponding HTML page. --&gt;
+                        &lt;div id="active-source"&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+
+                    &lt;hr id="downloads"/&gt;
+
+                    &lt;h3&gt;Downloads&lt;/h3&gt;
+                    &lt;!-- This image is used as a link to the github page for the Document Encryptor. --&gt;
+                    &lt;div class="row"&gt;
+                        &nbsp;&nbsp;&nbsp;
+                        &lt;a href="https://github.com/AkshaySG14/Document-Encryptor" target="_blank"&gt;
+                            &lt;i class="fa fa-github fa-4x" aria-hidden="true" title="Github Link"&gt;&lt;/i&gt;
+                        &lt;/a&gt;
+                        &nbsp;&nbsp;&nbsp;
+                        &lt;!-- The download link for the source code. Note that for the other pages, the game/application itself is used (with the exception of Traffic Director) --&gt;
+                        &lt;a href="Static/Assets/DocumentEncryptor/DocumentEncryptor.zip" target="_blank"&gt;
+                            &lt;i class="fa fa-download fa-4x" aria-hidden="true" title="Mac Application Download"&gt;&lt;/i&gt;
+                        &lt;/a&gt;
+                    &lt;/div&gt;
+                    &lt;br/&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;!-- Simple copyright + email address --&gt;
+        &lt;div class="footer text-center"&gt;
+            Copyright © Akshay Subramaniam -- Email Akshay.SG14@gmail.com for any issues
+        &lt;/div&gt;
+
+        &lt;script src="Static/js/main.js"&gt;&lt;/script&gt;
+
+        &lt;script&gt;
+            $(function() {
+                // Gets the div that houses the source code.
+                const activeSource = $("#active-source");
+                // Initialize variable responsible for deciding source code to display.
+                var source = 0;
+
+                // Renews the PrismJS script so that the code is properly highlighted.
+                function renewPrism() {
+                    $('script[src="Static/js/prism.js"]').remove();
+                    $('&lt;script&gt;').attr('src', "Static/js/prism.js").appendTo('head');
+                }
+
+                // Script responsible for setting the text of the source code being displayed.
+                function setScript() {
+                    switch (parseInt(source)) {
+                        case 0:
+                            // Sends an async request to load the relevant source code, and then reinitializes the
+                            // highlighting script (prism.js).
+                            activeSource.load('Static/SourceCode/DocumentEncryptor/TextEncryptorC.html', renewPrism);
+                            break;
+                        case 1:
+                            activeSource.load('Static/SourceCode/DocumentEncryptor/TextEncryptorH.html', renewPrism);
+                            break;
+                        case 2:
+                            activeSource.load('Static/SourceCode/DocumentEncryptor/Encryptor.html', renewPrism);
+                            break;
+                        case 3:
+                            activeSource.load('Static/SourceCode/DocumentEncryptor/Decryptor.html', renewPrism);
+                            break;
+                        case 4:
+                            activeSource.load('Static/SourceCode/DocumentEncryptor/Cipher.html', renewPrism);
+                            break;
+                        case 5:
+                            activeSource.load('Static/SourceCode/DocumentEncryptor/PlayfairCipher.html', renewPrism);
+                            break;
+                        case 6:
+                            activeSource.load('Static/SourceCode/DocumentEncryptor/HillCipher.html', renewPrism);
+                            break;
+                        case 7:
+                            activeSource.load('Static/SourceCode/DocumentEncryptor/ColumnarTransposition.html', renewPrism);
+                            break;
+                        case 8:
+                            activeSource.load('Static/SourceCode/DocumentEncryptor/ThreeByOneMatrix.html', renewPrism);
+                            break;
+                        case 9:
+                            activeSource.load('Static/SourceCode/DocumentEncryptor/ThreeByThreeMatrix.html', renewPrism);
+                            break;
+                    }
+                }
+
+                // Clears all the HTML of the source code div.
+                function clearScript() {
+                    activeSource.html("");
+                }
+
+                // When clicking a specific source code to view in the dropdown bar.
+                $(".dropdown-item").click(function () {
+                    $('#dropdownMenuButton').text($(this).text());
+                    source = $(this).attr('data-val');
+                    clearScript();
+                    setScript();
+                });
+                // Sets initial source code.
+                setScript();
+            });
+        &lt;/script&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>

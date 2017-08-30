@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Color Synthesizer</title>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+        <script src="https://npmcdn.com/tether@1.2.4/dist/js/tether.min.js"></script>
+        <script src="Static/js/bootstrap.min.js"></script>
+        <script src="Static/js/prism.js"></script>
+        <script src="Static/js/jquery.waypoints.min.js"></script>
+        <script src="Static/js/underscore-min.js"></script>
+        <link href="Static/css/bootstrap.min.css" rel="stylesheet">
+        <link href="Static/css/font-awesome.min.css" rel="stylesheet">
+        <link href="Static/css/main.css" rel="stylesheet">
+        <link href="Static/css/prism.css" rel="stylesheet">
+    </head>
+    <body>
+        <!-- This is the navigation bar located at the top of the screen. It serves as a way for users to navigate to different web pages. Note
+        the usage of ID's for the stylesheet -->
+        <div id="summary">
+            <nav class="navbar navbar-toggleable-md navbar-inverse bg-inverse fixed-top" id="main-navbar">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbar">
+                    <p class="navbar-brand">Apps</p>
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="Memori.html">Memori</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="MagneticMotionDemo.html">Magnetic Motion Demo</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="PixelKnight.html">Pixel Knight</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="DarkAndLight.html">Dark and Light</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="FatesReprise.html">Fate's Reprise</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="ColorSynthesizer.html">Color Synthesizer</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="DocumentEncryptor.html">Document Encryptor</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="FileEncryptor.html">File Encryptor</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="TrafficDirector.html">Traffic Director</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="SpaceShooter.html">Space Shooter</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+
+        <div class="container-fluid">
+            <div class="row">
+                <!--Side Navbar-->
+                <div class="col-md-2 hidden-sm-down bg-faded">
+                    <nav class="sidebar">
+                        <ul class="nav nav-pills flex-column">
+                            <br/>
+                            <li class="nav-item active" id="summary-pill">
+                                <a class="nav-link" id="summary-link">Summary</a>
+                            </li>
+                            <li class="nav-item" id="screenshots-pill">
+                                <a class="nav-link" id="screenshots-link">Screenshots</a>
+                            </li>
+                            <li class="nav-item" id="code-pill">
+                                <a class="nav-link" id="code-link">Source Code</a>
+                            </li>
+                            <li class="nav-item" id="downloads-pill">
+                                <a class="nav-link" id="downloads-link">Downloads</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="col-md-10">
+                    <br/>
+                    <h1>
+                        Color Synthesizer
+                    </h1>
+                    <p>
+                        Color Synthesizer is a mac application that allows the user to interact with a "pixel board". By coloring pixels on
+                        the board, the user can create a variety of colorful patterns of any shape or size. The application allows the user
+                        to change the cursor size, to erase or fill the pixel board, and to create nearly any color through three color
+                        sliders.
+                        <br/><br/>
+                        The application itself was created in Xcode, and written in C++ as a learning experience. Though written completely
+                        in C++, the code is built on the SFML, which provided the functions necessary for the code to work.
+                        Regardless, anyone versed in C++ would be able to easily examine the code.
+                        <br/><br/>
+                        To launch the application, a mac with the latest OS is required. The application itself can be launched immediately
+                        once downloaded. Due to the simplicity of the application, it only requires a mouse/trackpad. The user should be
+                        able to easily navigate through the UI to interact with the application.
+                        <br/><br/>
+                        NOTE: This application can only be downloaded on Mac Operating Systems.
+                    </p>
+
+                    <br/>
+                    
+                    <h3>
+                        How and Why Color Synthesizer Was Made
+                    </h3>
+
+                    <p>
+                        My first attempts at writing C++ gradually coalesced into the development Color Synthesizer. Though originally a simple application
+                        designed purely for exploratory purposes, Color Synthesizer was developed as a fully-fledged application with the
+                        help of the the Simple and Fast Multimedia Library (SFML). Thus, Color Synthesizer, though basic in its composition, is a completed application
+                        that users can not only interact with but learn from as well.
+                        <br/><br/>
+                        Color Synthesizer is entirely written in C++, and only differs from the basic language in that it uses the SFML for rendering purposes. However, the code can very easily be understood by someone versed in C++, and
+                        uses basic logic for the majority of its functions.
+                        <br/>
+                    </p>
+
+                    <hr id="screenshots"/>
+
+                    <!-- These images serve as screenshots of the application for the user to look at -->
+                    <h2>Screenshots</h2>
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <img src="Static/Assets/ColorSynthesizer/colorsynthesizerscreen1.png" class="img-thumbnail" alt="Color Synthesizer Screenshot One">
+                        </div>
+                        <div class="col-sm-4">
+                            <img src="Static/Assets/ColorSynthesizer/colorsynthesizerscreen2.png" class="img-thumbnail" alt="Color Synthesizer Screenshot Two">
+                        </div>
+                        <div class="col-sm-4">
+                            <img src="Static/Assets/ColorSynthesizer/colorsynthesizerscreen3.png" class="img-thumbnail" alt="Color Synthesizer Screenshot Three">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <img src="Static/Assets/ColorSynthesizer/colorsynthesizerscreen4.png" class="img-thumbnail" alt="Color Synthesizer Screenshot Four">
+                        </div>
+                        <div class="col-sm-4">
+                            <img src="Static/Assets/ColorSynthesizer/colorsynthesizerscreen5.png" class="img-thumbnail" alt="Color Synthesizer Screenshot Five">
+                        </div>
+                        <div class="col-sm-4">
+                            <img src="Static/Assets/ColorSynthesizer/colorsynthesizerscreen6.png" class="img-thumbnail" alt="Color Synthesizer Screenshot Six">
+                        </div>
+                    </div>
+
+                    <hr id="code">
+
+                    <!-- Gives the source code for Color Synthesizer -->
+                    <h2>Color Synthesizer Source Code</h2>
+                    <div>
+                        <!-- These are the buttons that change the tabs for the source code. By clicking a button, the user will change what source code is displayed. This is achieved by jQuery -->
+                        <div class="dropdown">
+                            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Main.cpp
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <a class="dropdown-item" data-val="0">Main.cpp</a>
+                                <a class="dropdown-item" data-val="1">ColorManager.cpp</a>
+                                <a class="dropdown-item" data-val="2">ColorManager.h</a>
+                                <a class="dropdown-item" data-val="3">CursorManager.cpp</a>
+                                <a class="dropdown-item" data-val="4">CursorManager.h</a>
+                                <a class="dropdown-item" data-val="5">WindowManager.cpp</a>
+                                <a class="dropdown-item" data-val="6">WindowManager.h</a>
+                                <a class="dropdown-item" data-val="7">ResourcePath.mm</a>
+                                <a class="dropdown-item" data-val="8">ResourcePath.hpp</a>
+                            </div>
+                        </div>
+                        <!-- This is where the actual source code is displayed. The source code is displayed via jQuery injectin of the corresponding HTML page. -->
+                        <div id="active-source">
+                        </div>
+                    </div>
+
+                    <hr id="downloads"/>
+
+                    <h3>Downloads</h3>
+                    <!-- This image is used as a link to the github page for the Color Synthesizer. -->
+                    <div class="row">
+                        &nbsp;&nbsp;&nbsp;
+                        <a href="https://github.com/AkshaySG14/Color-Synthesizer" target="_blank">
+                            <i class="fa fa-github fa-4x" aria-hidden="true" title="Github Link"></i>
+                        </a>
+                        &nbsp;&nbsp;&nbsp;
+                        <!-- The download link for the source code. Note that for the other pages, the game/application itself is used (with the exception of Traffic Director) -->
+                        <a href="Static/Assets/ColorSynthesizer/ColorSynthesizer.zip" target="_blank">
+                            <i class="fa fa-download fa-4x" aria-hidden="true" title="Jar Download"></i>
+                        </a>
+                    </div>
+                    <br/>
+                </div>
+            </div>
+        </div>
+
+        <!-- Simple copyright + email address -->
+        <div class="footer text-center">
+            Copyright © Akshay Subramaniam -- Email Akshay.SG14@gmail.com for any issues
+        </div>
+
+        <script src="Static/js/main.js"></script>
+
+        <script>
+            $(function() {
+                // Gets the div that houses the source code.
+                const activeSource = $("#active-source");
+                // Initialize variable responsible for deciding source code to display.
+                var source = 0;
+
+                // Renews the PrismJS script so that the code is properly highlighted.
+                function renewPrism() {
+                    $('script[src="Static/js/prism.js"]').remove();
+                    $('<script>').attr('src', "Static/js/prism.js").appendTo('head');
+                }
+
+                // Script responsible for setting the text of the source code being displayed.
+                function setScript() {
+                    switch (parseInt(source)) {
+                        case 0:
+                            // Sends an async request to load the relevant source code, and then reinitializes the
+                            // highlighting script (prism.js).
+                            activeSource.load('Static/SourceCode/ColorSynthesizer/Main.html', renewPrism);
+                            break;
+                        case 1:
+                            activeSource.load('Static/SourceCode/ColorSynthesizer/ColorManagerC.html', renewPrism);
+                            break;
+                        case 2:
+                            activeSource.load('Static/SourceCode/ColorSynthesizer/ColorManagerH.html', renewPrism);
+                            break;
+                        case 3:
+                            activeSource.load('Static/SourceCode/ColorSynthesizer/CursorManagerC.html', renewPrism);
+                            break;
+                        case 4:
+                            activeSource.load('Static/SourceCode/ColorSynthesizer/CursorManagerH.html', renewPrism);
+                            break;
+                        case 5:
+                            activeSource.load('Static/SourceCode/ColorSynthesizer/WindowManagerC.html', renewPrism);
+                            break;
+                        case 6:
+                            activeSource.load('Static/SourceCode/ColorSynthesizer/WindowManagerH.html', renewPrism);
+                            break;
+                        case 7:
+                            activeSource.load('Static/SourceCode/ColorSynthesizer/ResourcePathMM.html', renewPrism);
+                            break;
+                        case 8:
+                            activeSource.load('Static/SourceCode/ColorSynthesizer/ResourcePathH.html', renewPrism);
+                            break;
+                    }
+                }
+
+                // Clears all the HTML of the source code div.
+                function clearScript() {
+                    activeSource.html("");
+                }
+
+                // When clicking a specific source code to view in the dropdown bar.
+                $(".dropdown-item").click(function () {
+                    $('#dropdownMenuButton').text($(this).text());
+                    source = $(this).attr('data-val');
+                    clearScript();
+                    setScript();
+                });
+                // Sets initial source code.
+                setScript();
+            });
+        </script>
+    </body>
+</html>

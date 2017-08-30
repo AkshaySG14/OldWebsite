@@ -1,0 +1,190 @@
+<pre><code class="language-c++">//
+//  HillCipher.cpp
+//  Text Encryptor
+//
+//  Created by Akshay Subramaniam on 11/5/15.
+//  Copyright (c) 2015 Incultus. All rights reserved.
+//
+
+#include "HillCipher.h"
+
+// Gets the message and whether the cipher is encrypting or decrypting.
+HillCipher::HillCipher(std::string message, bool encrypt) : Cipher(message) {
+    if (encrypt)
+        getCipherText();
+    else
+        getPlainText();
+}
+
+// Creates the cipher text.
+void HillCipher::getCipherText() {
+    // This is the 3x3 key for the cipher text. It is multiplied with the message matrix to create some obscurity.
+    int key[3][3] = {2, 1, 1, 3, 2, 1, 2, 1, 2};
+    // Creates the 3x3 matrix class using the actual int array.
+    ThreeByThreeMatrix keyMatrix(key);
+    // Breaks the message into three length segments.
+    std::vector&lt;std::string&gt; brokenMessage = getBrokenMessage();
+    // Creates a vector of 3x1 matrices. This vector is responsible for getting the numbers representing the actual characters of the broken messages.
+    std::vector&lt;std::vector&lt;std::vector&lt;int&gt;&gt;&gt; messageMatrices;
+    // This is the vector of 3x1 matrices that holds the encrypted values for the cipher text.
+    std::vector&lt;std::vector&lt;std::vector&lt;int&gt;&gt;&gt; cipherMatrices;
+    
+    // Cycles through all the 3-length messages.
+    for (std::vector&lt;std::string&gt;::iterator it = brokenMessage.begin(); it != brokenMessage.end(); ++it) {
+        // Creates a 3x1 matrix that holds int values that represents the characters in the cipher matrix (in the super class).
+        std::vector&lt;std::vector&lt;int&gt;&gt; tempMatrix;
+        tempMatrix.resize(3);
+        for (int i = 0; i &lt; 3; ++i)
+            tempMatrix[i].resize(1);
+        
+        // Gets the actual int values from the method.
+        std::vector&lt;int&gt; tempMatrices = getMessageMatrix(*it);
+        tempMatrix[0][0] = tempMatrices.at(0);
+        tempMatrix[1][0] = tempMatrices.at(1);
+        tempMatrix[2][0] = tempMatrices.at(2);
+        // Holds this newly created 3x1 matrix in the messagematrices vector.
+        messageMatrices.push_back(tempMatrix);
+    }
+    
+    for (std::vector&lt;std::vector&lt;std::vector&lt;int&gt;&gt;&gt;::iterator it = messageMatrices.begin(); it != messageMatrices.end(); ++it) {
+        // Sets the iterator as a new 3x1 matrix, to make it easier to see what is occurring.
+        std::vector&lt;std::vector&lt;int&gt;&gt; threeByOneVector = *it;
+        int threeByOneArray[3][1];
+        
+        // Transfers the 3x1 matrix values from the vector to the int array.
+        for (int i = 0; i &lt; 3; ++i)
+            threeByOneArray[i][0] = threeByOneVector[i][0];
+        
+        // Creates a threebyone matrix object from this array.
+        ThreeByOneMatrix threeByOneMatrix(threeByOneArray);
+        // Creates a new 3x1 matrix by multiplying the key matrix by the three by one matrix.
+        ThreeByOneMatrix cipherMatrix = keyMatrix.multiply(threeByOneMatrix);
+        // Modulos every value of the 3x1 matrix by 90.
+        cipherMatrix.modulo();
+        
+        // Adds the newly created 3x1 matrix to the vector of 3x3 matrices.
+        cipherMatrices.push_back(cipherMatrix.getMatrix());
+    }
+    
+    for (std::vector&lt;std::vector&lt;std::vector&lt;int&gt;&gt;&gt;::iterator it = cipherMatrices.begin(); it != cipherMatrices.end(); ++it) {
+        // Gets the message part by translating the elements of the 3x1 matrix from integers to letters.
+        std::string cipherMessagePart = getCipherMessage(*it);
+        // Adds the message part to the cipher matrix.
+        cipherText += cipherMessagePart;
+    }
+    
+    // Adds a blank space every two characters.
+    int count = 0;
+    for (int i = 0; i &lt; cipherText.length(); ++ i)
+        if ((i - count) % 2 == 0 && i != 0) {
+            cipherText.insert(i, " ");
+            ++ count;
+            ++ i;
+        }    
+}
+
+// Does the opposite of what the encryption version does.
+void HillCipher::getPlainText() {
+    // Same key.
+    int key[3][3] = {2, 1, 1, 3, 2, 1, 2, 1, 2};
+    // The key is now the inverted version of the original 3x3 matrix. Look at the inversion method to check how this was done.
+    ThreeByThreeMatrix keyMatrix(key);
+    keyMatrix = keyMatrix.invert();
+        
+    std::vector&lt;std::string&gt; brokenMessage = getBrokenMessage();
+    std::vector&lt;std::vector&lt;std::vector&lt;int&gt;&gt;&gt; messageMatrices;
+    std::vector&lt;std::vector&lt;std::vector&lt;int&gt;&gt;&gt; cipherMatrices;
+    
+    // Same as the encrypted version.
+    for (std::vector&lt;std::string&gt;::iterator it = brokenMessage.begin(); it != brokenMessage.end(); ++it) {
+        std::vector&lt;std::vector&lt;int&gt;&gt; tempMatrix;
+        tempMatrix.resize(3);
+        for (int i = 0; i &lt; 3; ++i)
+            tempMatrix[i].resize(1);
+        
+        std::vector&lt;int&gt; tempMatrices = getMessageMatrix(*it);
+        tempMatrix[0][0] = tempMatrices.at(0);
+        tempMatrix[1][0] = tempMatrices.at(1);
+        tempMatrix[2][0] = tempMatrices.at(2);
+        messageMatrices.push_back(tempMatrix);
+    }
+    
+    // Same as the encrypted version.
+    for (std::vector&lt;std::vector&lt;std::vector&lt;int&gt;&gt;&gt;::iterator it = messageMatrices.begin(); it != messageMatrices.end(); ++it) {
+        std::vector&lt;std::vector&lt;int&gt;&gt; threeByOneVector = *it;
+        int threeByOneArray[3][1];
+        
+        for (int i = 0; i &lt; 3; ++i)
+            threeByOneArray[i][0] = threeByOneVector[i][0];
+        
+        ThreeByOneMatrix threeByOneMatrix(threeByOneArray);
+        
+        ThreeByOneMatrix cipherMatrix = keyMatrix.multiply(threeByOneMatrix);
+        
+        cipherMatrix.modulo();
+        
+        
+        cipherMatrices.push_back(cipherMatrix.getMatrix());
+    }
+    
+    for (std::vector&lt;std::vector&lt;std::vector&lt;int&gt;&gt;&gt;::iterator it = cipherMatrices.begin(); it != cipherMatrices.end(); ++it) {
+        std::string cipherMessagePart = getCipherMessage(*it);
+        plainText += cipherMessagePart;
+    }
+    
+    // This removes the chaff added at the end of the decrypted plain text, if it exists.
+    if (plainText.substr(plainText.length() - 1, 1) == "1" &&
+        plainText.substr(plainText.length() - 4, 1) == "*")
+        plainText = plainText.substr(0, plainText.length() - 4);
+    
+    if (plainText.substr(plainText.length() - 1, 1) == "2" &&
+        plainText.substr(plainText.length() - 5, 1) == "*")
+        plainText = plainText.substr(0, plainText.length() - 5);
+    
+}
+
+// Creates extra characters, if the message is of the wrong length.
+std::vector&lt;std::string&gt; HillCipher::getBrokenMessage() {
+    std::vector&lt;std::string&gt; brokenMessage;
+    // If the message is one character too long.
+    if (message.length() % 3 == 2)
+        message += "***1";
+    // If the message is two characters too long.
+    if (message.length() % 3 == 1)
+        message += "****2";
+    // Adds extra to the message.
+    for (int i = 0; i &lt; message.length(); i += 3)
+        brokenMessage.push_back(message.substr(i, 3));
+    return brokenMessage;
+}
+
+// Gets the numerical value of the character from the superclass matrix.
+std::vector&lt;int&gt; HillCipher::getMessageMatrix(std::string message) {
+    std::vector&lt;int&gt; messageMatrix;
+    for (int i = 0; i &lt; 3; i ++) {
+        // Gets the specific character.
+        std::string character = message.substr(i, 1);
+        for (int x = 0; x &lt; 10; x ++)
+            for (int y = 0; y &lt; 9; y ++)
+                if (matrix[x][y] == character)
+                    // Gets the position of thecharacter in the superclass matrix by multipling the row number, and adding the column number. For example, a character on row 3, column 5 would have a value of 32.
+                    messageMatrix.push_back(x * 9 + y);
+    }
+    return messageMatrix;
+}
+
+// The reverse of the previous method.
+std::string HillCipher::getCipherMessage(std::vector&lt;std::vector&lt;int&gt;&gt; cipherArray) {
+    std::string cipherMessage = "";
+    
+    for (int i = 0; i &lt; 3; i ++) {
+        // Divides the row value by 9 to get the row number. For example, a value of 57 would yield row 6.
+        int x = cipherArray[i][0] / 9;
+        // Modulos the column value by 9 to get the column number. For example, a value of 57 would yield column 3.
+        int y = cipherArray[i][0] % 9;
+        // Gets the character by using the row and column numbers.
+        cipherMessage += matrix[x][y];
+    }
+    return cipherMessage;
+}
+</code></pre>

@@ -1,0 +1,82 @@
+<pre><code class="language-c++">//
+//  Encryptor.cpp
+//  Text Encryptor
+//
+//  Created by Akshay Subramaniam on 6/5/15.
+//  Copyright (c) 2015 Incultus. All rights reserved.
+//
+
+#include "Encryptor.h"
+
+// Sets the message, which is encrypted, and the type, which indicates which cipher is used to encrypt the message.
+Encryptor::Encryptor(int type, std::string message) : type(type),  message(message) {
+    encrypt();
+}
+
+//Simple method with a switch statement that encrypts based on cipher type.
+void Encryptor::encrypt() {
+    switch (type) {
+        case 0:
+            playfairCipher();
+            break;
+        case 1:
+            hillCipher();
+            break;
+        case 2:
+            colTransposition();
+            break;
+        case 3:
+            playfairCol();
+            break;
+        case 4:
+            hillCol();
+            break;
+    }
+
+}
+
+// Encrypts the message with a playfair cipher, using the playfair cipher class, and acquires the cipher text.
+void Encryptor::playfairCipher() {
+    PlayfairCipher::PlayfairCipher encryptCipher(message, true);
+    cipherText = encryptCipher.giveCipherText();
+}
+
+// Encrypts the message with a hill cipher, using the hill cipher class, and acquires the cipher text.
+void Encryptor::hillCipher() {
+    HillCipher::HillCipher encryptCipher(message, true);
+    cipherText = encryptCipher.giveCipherText();
+}
+
+// Encrypts the message with a double columnar transposition cipher, using the columnar transposition cipher class, and acquires the cipher text.
+void Encryptor::colTransposition() {
+    ColumnarTransposition::ColumnarTransposition encryptCipher(message, true, true);
+    cipherText = encryptCipher.giveCipherText();
+    ColumnarTransposition::ColumnarTransposition encryptCipher2(cipherText, true, false);
+    cipherText = encryptCipher2.giveCipherText();
+}
+
+// Encrypts the message with a playfair cipher, followed by a double columnar cipher, using the playfair cipher class and the columnar transposition cipher class. Also acquires the cipher text.
+void Encryptor::playfairCol() {
+    PlayfairCipher::PlayfairCipher encryptCipher(message, true);
+    cipherText = encryptCipher.giveCipherText();
+    ColumnarTransposition::ColumnarTransposition encryptCipher2(cipherText, true, true);
+    cipherText = encryptCipher2.giveCipherText();
+    ColumnarTransposition::ColumnarTransposition encryptCipher3(cipherText, true, false);
+    cipherText = encryptCipher3.giveCipherText();
+}
+
+// Encrypts the message with a hill cipher, followed by a double columnar transposition cipher, using the hill cipher class and the columnar transposition cipher class. Also acquires the cipher text.
+void Encryptor::hillCol() {
+    HillCipher::HillCipher encryptCipher(message, true);
+    cipherText = encryptCipher.giveCipherText();
+    ColumnarTransposition::ColumnarTransposition encryptCipher2(cipherText, true, true);
+    cipherText = encryptCipher2.giveCipherText();
+    ColumnarTransposition::ColumnarTransposition encryptCipher3(cipherText, true, false);
+    cipherText = encryptCipher3.giveCipherText();
+}
+
+// Gives the encrypted text to the text encryptor class.
+std::string Encryptor::giveCipherText() {
+    return cipherText;
+}
+</code></pre>

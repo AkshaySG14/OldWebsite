@@ -1,0 +1,26 @@
+a {
+    cursor: pointer;
+}
+
+.sidebar {
+    position: fixed;
+}
+
+.fa {
+    color: black;
+}
+
+.footer {
+    color: white;
+    background-color: #000000;
+}
+
+.nav-pills > li.active {
+    color: white;
+    background-color: #000000;
+    border-radius: 5px;
+}
+
+#active-source {
+    font-size: 15px;
+}

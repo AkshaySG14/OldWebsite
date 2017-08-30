@@ -1,0 +1,276 @@
+<pre><code class="language-markup">&lt;!-- Note that all web pages are VERY similar to index.html. The only difference being in the screenshots section of the page --&gt;
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+    &lt;!-- This is the home page of the Website and it contains all the links to the other pages --&gt;
+    &lt;head&gt;
+        &lt;meta charset="UTF-8"&gt;
+        &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+        &lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
+        &lt;title&gt;Memori&lt;/title&gt;
+        &lt;script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"&gt;&lt;/script&gt;
+        &lt;script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"&gt;&lt;/script&gt;
+        &lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"&gt;&lt;/script&gt;
+        &lt;script src="https://npmcdn.com/tether@1.2.4/dist/js/tether.min.js"&gt;&lt;/script&gt;
+        &lt;script src="Static/js/bootstrap.min.js"&gt;&lt;/script&gt;
+        &lt;script src="Static/js/prism.js"&gt;&lt;/script&gt;
+        &lt;script src="Static/js/jquery.waypoints.min.js"&gt;&lt;/script&gt;
+        &lt;script src="Static/js/underscore-min.js"&gt;&lt;/script&gt;
+        &lt;link href="Static/css/bootstrap.min.css" rel="stylesheet"&gt;
+        &lt;link href="Static/css/font-awesome.min.css" rel="stylesheet"&gt;
+        &lt;link href="Static/css/main.css" rel="stylesheet"&gt;
+        &lt;link href="Static/css/prism.css" rel="stylesheet"&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;!-- This is the navigation bar located at the top of the screen. It serves as a way for users to navigate to different web pages. Note
+        the usage of ID's for the stylesheet --&gt;
+        &lt;div id="summary"&gt;
+            &lt;nav class="navbar navbar-toggleable-md navbar-inverse bg-inverse fixed-top" id="main-navbar"&gt;
+                &lt;button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation"&gt;
+                    &lt;span class="navbar-toggler-icon"&gt;&lt;/span&gt;
+                &lt;/button&gt;
+                &lt;div class="collapse navbar-collapse" id="navbar"&gt;
+                    &lt;p class="navbar-brand"&gt;Apps&lt;/p&gt;
+                    &lt;ul class="navbar-nav mr-auto"&gt;
+                        &lt;li class="nav-item"&gt;
+                            &lt;a class="nav-link" href="index.html"&gt;Home&lt;/a&gt;
+                        &lt;/li&gt;
+                        &lt;li class="nav-item active"&gt;
+                            &lt;a class="nav-link" href="Memori.html"&gt;Memori&lt;/a&gt;
+                        &lt;/li&gt;
+                        &lt;li class="nav-item"&gt;
+                            &lt;a class="nav-link" href="MagneticMotionDemo.html"&gt;Magnetic Motion Demo&lt;/a&gt;
+                        &lt;/li&gt;
+                        &lt;li class="nav-item"&gt;
+                            &lt;a class="nav-link" href="PixelKnight.html"&gt;Pixel Knight&lt;/a&gt;
+                        &lt;/li&gt;
+                        &lt;li class="nav-item"&gt;
+                            &lt;a class="nav-link" href="DarkAndLight.html"&gt;Dark and Light&lt;/a&gt;
+                        &lt;/li&gt;
+                        &lt;li class="nav-item"&gt;
+                            &lt;a class="nav-link" href="FatesReprise.html"&gt;Fate's Reprise&lt;/a&gt;
+                        &lt;/li&gt;
+                        &lt;li class="nav-item"&gt;
+                            &lt;a class="nav-link" href="ColorSynthesizer.html"&gt;Color Synthesizer&lt;/a&gt;
+                        &lt;/li&gt;
+                        &lt;li class="nav-item"&gt;
+                            &lt;a class="nav-link" href="DocumentEncryptor.html"&gt;Document Encryptor&lt;/a&gt;
+                        &lt;/li&gt;
+                        &lt;li class="nav-item"&gt;
+                            &lt;a class="nav-link" href="FileEncryptor.html"&gt;File Encryptor&lt;/a&gt;
+                        &lt;/li&gt;
+                        &lt;li class="nav-item"&gt;
+                            &lt;a class="nav-link" href="TrafficDirector.html"&gt;Traffic Director&lt;/a&gt;
+                        &lt;/li&gt;
+                        &lt;li class="nav-item"&gt;
+                            &lt;a class="nav-link" href="SpaceShooter.html"&gt;Space Shooter&lt;/a&gt;
+                        &lt;/li&gt;
+                    &lt;/ul&gt;
+                &lt;/div&gt;
+            &lt;/nav&gt;
+        &lt;/div&gt;
+
+        &lt;div class="container-fluid"&gt;
+            &lt;div class="row"&gt;
+                &lt;!--Side Navbar--&gt;
+                &lt;div class="col-md-2 hidden-sm-down bg-faded"&gt;
+                    &lt;nav class="sidebar"&gt;
+                        &lt;ul class="nav nav-pills flex-column"&gt;
+                            &lt;br/&gt;
+                            &lt;li class="nav-item active" id="summary-pill"&gt;
+                                &lt;a class="nav-link" id="summary-link"&gt;Summary&lt;/a&gt;
+                            &lt;/li&gt;
+                            &lt;li class="nav-item" id="screenshots-pill"&gt;
+                                &lt;a class="nav-link" id="screenshots-link"&gt;Screenshots&lt;/a&gt;
+                            &lt;/li&gt;
+                            &lt;li class="nav-item" id="video-pill"&gt;
+                                &lt;a class="nav-link" id="video-link"&gt;Video&lt;/a&gt;
+                            &lt;/li&gt;
+                            &lt;li class="nav-item" id="code-pill"&gt;
+                                &lt;a class="nav-link" id="code-link"&gt;Source Code&lt;/a&gt;
+                            &lt;/li&gt;
+                            &lt;li class="nav-item" id="downloads-pill"&gt;
+                                &lt;a class="nav-link" id="downloads-link"&gt;Downloads&lt;/a&gt;
+                            &lt;/li&gt;
+                        &lt;/ul&gt;
+                    &lt;/nav&gt;
+                &lt;/div&gt;
+                &lt;div class="col-md-10"&gt;
+                    &lt;br/&gt;
+                    &lt;h1&gt;
+                        Memori
+                    &lt;/h1&gt;
+                    &lt;p&gt;
+                        Memori is a simple memory game involving patterns. Memori was a game developed for android, and consists of players
+                        memorizing and then repeating randomly selected patterns of circles. The game itself was developed on android studio,
+                        and uses no game engine to support itself. Thus, the code may be a little verbose. Nevertheless, the code does
+                        function and should provide for a learning experience for aspiring android developers. To access the game itself,
+                        the application must be downloaded from the android store.
+                        &lt;br/&gt;
+                        NOTE: The game is only available on android and can only be downloaded through the Google Play Store
+                    &lt;/p&gt;
+
+                    &lt;br/&gt;
+
+                    &lt;h3&gt;
+                        How and Why Memori Was Made
+                    &lt;/h3&gt;
+
+                    &lt;p&gt;
+                        Inspired by the power of Java after taking AP Computer Science, I decided to attempt to hardcode an Android application. Thus I began developing Memori, and
+                        created the game after a couple of months learning how to code in Android. After much hard work, I finally produced a finished product that could be published, and released
+                        it on the Google Play Store.
+                        &lt;br/&gt;&lt;br/&gt;
+                        Language-wise, Memori is coded with absolutely no engine or software assistance.
+                        Thus, Memori can be read without any knowledge other than a basic understanding of Java and cursory knowledge of the Android APIs. However, the game does require basic
+                        runtime knowledge such as locking and running threads, multithreading, and basic rendering concepts.
+                        &lt;br/&gt;&lt;br/&gt;
+                        The code for Memori is noticeably untidy, as it was my first attempt at a legitimate, long-term application. That
+                        being said, it should still be decently readable and didactic.
+                        &lt;br/&gt;
+                    &lt;/p&gt;
+
+                    &lt;hr id="screenshots"/&gt;
+
+                    &lt;!-- These images serve as screenshots of the game for the user to look at --&gt;
+                    &lt;h2&gt;Screenshots&lt;/h2&gt;
+                    &lt;div class="row"&gt;
+                        &lt;div class="col-sm-4"&gt;
+                            &lt;img src="Static/Assets/Memori/memori1.png" class="img-thumbnail" alt="Memori Screenshot One"&gt;
+                        &lt;/div&gt;
+                        &lt;div class="col-sm-4"&gt;
+                            &lt;img src="Static/Assets/Memori/memori2.png" class="img-thumbnail" alt="Memori Screenshot Two"&gt;
+                        &lt;/div&gt;
+                        &lt;div class="col-sm-4"&gt;
+                            &lt;img src="Static/Assets/Memori/memori3.png" class="img-thumbnail" alt="Memori Screenshot Three"&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;div class="row"&gt;
+                        &lt;div class="col-sm-4"&gt;
+                            &lt;img src="Static/Assets/Memori/memori4.png" class="img-thumbnail" alt="Memori Screenshot Four"&gt;
+                        &lt;/div&gt;
+                        &lt;div class="col-sm-4"&gt;
+                            &lt;img src="Static/Assets/Memori/memori5.png" class="img-thumbnail" alt="Memori Screenshot Five"&gt;
+                        &lt;/div&gt;
+                        &lt;div class="col-sm-4"&gt;
+                            &lt;img src="Static/Assets/Memori/memori6.png" class="img-thumbnail" alt="Memori Screenshot Six"&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+
+                    &lt;hr id="video"/&gt;
+
+                    &lt;!-- Shows a video preview of the game --&gt;
+                    &lt;h2&gt;Video Preview&lt;/h2&gt;
+                    &lt;video width="384" height="216" preload="none" controls&gt;
+                        &lt;source src="Static/Assets/Memori/Memori.mp4"/&gt;
+                        Your browser is unable to play this video.
+                    &lt;/video&gt;
+
+                    &lt;hr id="code"/&gt;
+
+                    &lt;!-- Gives the source code for Memori --&gt;
+                    &lt;h2&gt;Memori Source Code&lt;/h2&gt;
+                    &lt;div&gt;
+                        &lt;!-- These are the buttons that change the tabs for the source code. By clicking a button, the user will change what source code is displayed. This is achieved by jQuery --&gt;
+                        &lt;div class="dropdown"&gt;
+                            &lt;button class="btn btn-info dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"&gt;
+                                CircleGame.java
+                            &lt;/button&gt;
+                            &lt;div class="dropdown-menu" aria-labelledby="dropdownMenuButton"&gt;
+                                &lt;a class="dropdown-item" data-val="0"&gt;CircleGame.java&lt;/a&gt;
+                                &lt;a class="dropdown-item" data-val="1"&gt;CircleGameView.java&lt;/a&gt;
+                                &lt;a class="dropdown-item" data-val="2"&gt;Initializer.java&lt;/a&gt;
+                                &lt;a class="dropdown-item" data-val="3"&gt;LevelSelect.java&lt;/a&gt;
+                                &lt;a class="dropdown-item" data-val="4"&gt;BitmapManager.java&lt;/a&gt;
+                                &lt;a class="dropdown-item" data-val="5"&gt;SoundManager.java&lt;/a&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                        &lt;!-- This is where the actual source code is displayed. The source code is displayed via script from third party software (Gist). As the code can only be loaded by the loading of the page (due to the external script), I made a useful albeit unoptimal script to omit the extraneous loaded scripts by setting their innerHTMLs to null (""). In simpler words, I simply wipe the information off the spans (which contain the actual source code) that I dont' need --&gt;
+                        &lt;div id="active-source"&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+
+                        &lt;hr id="downloads"/&gt;
+
+                        &lt;h3&gt;Downloads&lt;/h3&gt;
+                    &lt;!-- This image is used as a link to the github page for the Memori. --&gt;
+                        &lt;div class="row"&gt;
+                            &nbsp;&nbsp;&nbsp;
+                            &lt;a href="https://github.com/AkshaySG14/Circle-Game" target="_blank"&gt;
+                                &lt;i class="fa fa-github fa-4x" aria-hidden="true" title="Github Link"&gt;&lt;/i&gt;
+                            &lt;/a&gt;
+                            &nbsp;&nbsp;&nbsp;
+                            &lt;!-- The download link for the source code. Note that for the other pages, the game/application itself is used (with the exception of Traffic Director) --&gt;
+                            &lt;a href="https://play.google.com/store/apps/details?id=memori.circle&hl=en" target="_blank"&gt;
+                                &lt;i class="fa fa-download fa-4x" aria-hidden="true" title="Google Playstore Link"&gt;&lt;/i&gt;
+                            &lt;/a&gt;
+                        &lt;/div&gt;
+                        &lt;br/&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;!-- Simple copyright + email address --&gt;
+        &lt;div class="footer text-center"&gt;
+            Copyright © Akshay Subramaniam -- Email Akshay.SG14@gmail.com for any issues
+        &lt;/div&gt;
+
+        &lt;script src="Static/js/main.js"&gt;&lt;/script&gt;
+
+        &lt;script&gt;
+            $(function() {
+                // Gets the div that houses the source code.
+                const activeSource = $("#active-source");
+                // Initialize variable responsible for deciding source code to display.
+                var source = 0;
+
+                // Renews the PrismJS script so that the code is properly highlighted.
+                function renewPrism() {
+                    $('script[src="Static/js/prism.js"]').remove();
+                    $('&lt;script&gt;').attr('src', "Static/js/prism.js").appendTo('head');
+                }
+
+                // Script responsible for setting the text of the source code being displayed.
+                function setScript() {
+                    switch (parseInt(source)) {
+                        case 0:
+                            // Sends an async request to load the relevant source code, and then reinitializes the
+                            // highlighting script (prism.js).
+                            activeSource.load('Static/SourceCode/Memori/CircleGame.html', renewPrism);
+                            break;
+                        case 1:
+                            activeSource.load('Static/SourceCode/Memori/CircleGameView.html', renewPrism);
+                            break;
+                        case 2:
+                            activeSource.load('Static/SourceCode/Memori/Initializer.html', renewPrism);
+                            break;
+                        case 3:
+                            activeSource.load('Static/SourceCode/Memori/LevelSelect.html', renewPrism);
+                            break;
+                        case 4:
+                            activeSource.load('Static/SourceCode/Memori/BitmapManager.html', renewPrism);
+                            break;
+                        case 5:
+                            activeSource.load('Static/SourceCode/Memori/SoundManager.html', renewPrism);
+                            break;
+                    }
+                }
+
+                // Clears all the HTML of the source code div.
+                function clearScript() {
+                    activeSource.html("");
+                }
+
+                // When clicking a specific source code to view in the dropdown bar.
+                $(".dropdown-item").click(function() {
+                    $('#dropdownMenuButton').text($(this).text());
+                    source = $(this).attr('data-val');
+                    clearScript();
+                    setScript();
+                });
+                // Sets initial source code.
+                setScript();
+            });
+        &lt;/script&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>

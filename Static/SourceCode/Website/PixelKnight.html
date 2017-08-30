@@ -1,0 +1,308 @@
+<pre><code class="language-markup">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+    &lt;head&gt;
+        &lt;meta charset="UTF-8"&gt;
+        &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+        &lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
+        &lt;title&gt;Pixel Knight&lt;/title&gt;
+        &lt;script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"&gt;&lt;/script&gt;
+        &lt;script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"&gt;&lt;/script&gt;
+        &lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"&gt;&lt;/script&gt;
+        &lt;script src="https://npmcdn.com/tether@1.2.4/dist/js/tether.min.js"&gt;&lt;/script&gt;
+        &lt;script src="Static/js/bootstrap.min.js"&gt;&lt;/script&gt;
+        &lt;script src="Static/js/prism.js"&gt;&lt;/script&gt;
+        &lt;script src="Static/js/jquery.waypoints.min.js"&gt;&lt;/script&gt;
+        &lt;script src="Static/js/underscore-min.js"&gt;&lt;/script&gt;
+        &lt;link href="Static/css/bootstrap.min.css" rel="stylesheet"&gt;
+        &lt;link href="Static/css/font-awesome.min.css" rel="stylesheet"&gt;
+        &lt;link href="Static/css/main.css" rel="stylesheet"&gt;
+        &lt;link href="Static/css/prism.css" rel="stylesheet"&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;!-- This is the navigation bar located at the top of the screen. It serves as a way for users to navigate to different web pages. Note
+        the usage of ID's for the stylesheet --&gt;
+        &lt;div id="summary"&gt;
+            &lt;nav class="navbar navbar-toggleable-md navbar-inverse bg-inverse fixed-top" id="main-navbar"&gt;
+                &lt;button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation"&gt;
+                    &lt;span class="navbar-toggler-icon"&gt;&lt;/span&gt;
+                &lt;/button&gt;
+                &lt;div class="collapse navbar-collapse" id="navbar"&gt;
+                    &lt;p class="navbar-brand"&gt;Apps&lt;/p&gt;
+                    &lt;ul class="navbar-nav mr-auto"&gt;
+                        &lt;li class="nav-item"&gt;
+                            &lt;a class="nav-link" href="index.html"&gt;Home&lt;/a&gt;
+                        &lt;/li&gt;
+                        &lt;li class="nav-item"&gt;
+                            &lt;a class="nav-link" href="Memori.html"&gt;Memori&lt;/a&gt;
+                        &lt;/li&gt;
+                        &lt;li class="nav-item"&gt;
+                            &lt;a class="nav-link" href="MagneticMotionDemo.html"&gt;Magnetic Motion Demo&lt;/a&gt;
+                        &lt;/li&gt;
+                        &lt;li class="nav-item active"&gt;
+                            &lt;a class="nav-link" href="PixelKnight.html"&gt;Pixel Knight&lt;/a&gt;
+                        &lt;/li&gt;
+                        &lt;li class="nav-item"&gt;
+                            &lt;a class="nav-link" href="DarkAndLight.html"&gt;Dark and Light&lt;/a&gt;
+                        &lt;/li&gt;
+                        &lt;li class="nav-item"&gt;
+                            &lt;a class="nav-link" href="FatesReprise.html"&gt;Fate's Reprise&lt;/a&gt;
+                        &lt;/li&gt;
+                        &lt;li class="nav-item"&gt;
+                            &lt;a class="nav-link" href="ColorSynthesizer.html"&gt;Color Synthesizer&lt;/a&gt;
+                        &lt;/li&gt;
+                        &lt;li class="nav-item"&gt;
+                            &lt;a class="nav-link" href="DocumentEncryptor.html"&gt;Document Encryptor&lt;/a&gt;
+                        &lt;/li&gt;
+                        &lt;li class="nav-item"&gt;
+                            &lt;a class="nav-link" href="FileEncryptor.html"&gt;File Encryptor&lt;/a&gt;
+                        &lt;/li&gt;
+                        &lt;li class="nav-item"&gt;
+                            &lt;a class="nav-link" href="TrafficDirector.html"&gt;Traffic Director&lt;/a&gt;
+                        &lt;/li&gt;
+                        &lt;li class="nav-item"&gt;
+                            &lt;a class="nav-link" href="SpaceShooter.html"&gt;Space Shooter&lt;/a&gt;
+                        &lt;/li&gt;
+                    &lt;/ul&gt;
+                &lt;/div&gt;
+            &lt;/nav&gt;
+        &lt;/div&gt;
+
+        &lt;div class="container-fluid"&gt;
+            &lt;div class="row"&gt;
+                &lt;!--Side Navbar--&gt;
+                &lt;div class="col-md-2 hidden-sm-down bg-faded"&gt;
+                    &lt;nav class="sidebar"&gt;
+                        &lt;ul class="nav nav-pills flex-column"&gt;
+                            &lt;br/&gt;
+                            &lt;li class="nav-item active" id="summary-pill"&gt;
+                                &lt;a class="nav-link" id="summary-link"&gt;Summary&lt;/a&gt;
+                            &lt;/li&gt;
+                            &lt;li class="nav-item" id="screenshots-pill"&gt;
+                                &lt;a class="nav-link" id="screenshots-link"&gt;Screenshots&lt;/a&gt;
+                            &lt;/li&gt;
+                            &lt;li class="nav-item" id="video-pill"&gt;
+                                &lt;a class="nav-link" id="video-link"&gt;Video&lt;/a&gt;
+                            &lt;/li&gt;
+                            &lt;li class="nav-item" id="code-pill"&gt;
+                                &lt;a class="nav-link" id="code-link"&gt;Source Code&lt;/a&gt;
+                            &lt;/li&gt;
+                            &lt;li class="nav-item" id="downloads-pill"&gt;
+                                &lt;a class="nav-link" id="downloads-link"&gt;Downloads&lt;/a&gt;
+                            &lt;/li&gt;
+                        &lt;/ul&gt;
+                    &lt;/nav&gt;
+                &lt;/div&gt;
+                &lt;div class="col-md-10"&gt;
+                    &lt;br/&gt;
+                    &lt;h1&gt;
+                        Pixel Knight
+                    &lt;/h1&gt;
+                    &lt;p&gt;
+                        Pixel Knight is a desktop platformer game much like Shovel Knight or Super Mario World.
+                        Pixel Knight follows the tale of a lone knight in search of adventure in the Iben Peninsula, and features numerous
+                        enemies, levels, and puzzles.
+                        &lt;br/&gt;&lt;br/&gt;
+                        As a computer game, Pixel Knight is operated through the use of arrow keys, the keyboard, and the mouse/trackpad,
+                        although some of the settings can be changed in game. Arrow keys are used in the title and over world screen, while
+                        the mouse/trackpad is used in option screens and the controls screen. In-game controls are entirely modifiable,
+                        although the default controls use the WASD setup in addition to the left, right, and middle mouse buttons.
+                        &lt;br/&gt;&lt;br/&gt;
+                        The game was made through use of the Java framework Libgdx, but still mostly operates upon the principles of Java. The
+                        code should be quite easy to read and understand, as long as the reader has a strong grasp of the Java language and
+                        Libgdx. For anyone wishing to play the game itself, a jar is available for download, that allows any OS to easily
+                        launch and run the game.
+                        &lt;br/&gt;&lt;br/&gt;
+                        NOTE: Unforunately, I was not able to test the game on a desktop computer before releasing it.
+                        For some undeterminable reason, the desktop version does have a tile visual glitch that renders lines across the
+                        game where there shouldn't be. Additionally, resizing the window causes a bug with the background.
+                        Though these bugs could have easily been fixed before, too much time has passed and the Libgdx framework I currently
+                        utilize is incompatible with the game. Regardless, to fully experience the game one must play it on a laptop or a
+                        smaller screen and refrain from resizing the window.
+                    &lt;/p&gt;
+
+                    &lt;br/&gt;
+
+                    &lt;h3&gt;
+                        How and Why Pixel Knight Was Made
+                    &lt;/h3&gt;
+
+                    &lt;p&gt;
+                        Pixel Knight was made as a follow-up to Memori. Where Memori is an android game that is rather simple in
+                        design, Pixel Knight is a fully-fledged desktop platformer game that took me months to finish. It was also a game
+                        that was much harder to write, as I had to create a platformer with little knowledge beforehand. Essentially, Pixel
+                        Knight was an attempt to really challenge and flex my coding abilities, and allowed me to see the extent to which
+                        I could create an application using pure Java (with a little help from Libgdx). Though it was nowhere near as
+                        complex as I would have liked, Pixel Knight was the first fully-developed desktop game I had made, and stands as a
+                        symbol of my commitment to self-improvement.
+                        &lt;br/&gt;&lt;br/&gt;
+                        Language-wise, Pixel Knight is completely written in Java, and is built upon the Libgdx Java framework. However,
+                        Libgdx is mostly used for the rendering of the sprites and the background, and thus is largely unnecessary to
+                        understand the code of this game. The game can be understood with a decent understanding of Java, and can be read
+                        and used as a learning tool.
+                        &lt;br/&gt;
+                    &lt;/p&gt;
+
+                    &lt;hr id="screenshots"/&gt;
+
+                    &lt;!-- These images serve as screenshots of the game for the user to look at --&gt;
+                    &lt;h2&gt;Screenshots&lt;/h2&gt;
+                    &lt;div class="row"&gt;
+                        &lt;div class="col-sm-4"&gt;
+                            &lt;img src="Static/Assets/PixelKnight/pixelknightscreen1.png" class="img-thumbnail" alt="Pixel Knight Screenshot One"&gt;
+                        &lt;/div&gt;
+                        &lt;div class="col-sm-4"&gt;
+                            &lt;img src="Static/Assets/PixelKnight/pixelknightscreen2.png" class="img-thumbnail" alt="Pixel Knight Screenshot Two"&gt;
+                        &lt;/div&gt;
+                        &lt;div class="col-sm-4"&gt;
+                            &lt;img src="Static/Assets/PixelKnight/pixelknightscreen3.png" class="img-thumbnail" alt="Pixel Knight Screenshot Three"&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;div class="row"&gt;
+                        &lt;div class="col-sm-4"&gt;
+                            &lt;img src="Static/Assets/PixelKnight/pixelknightscreen4.png" class="img-thumbnail" alt="Pixel Knight Screenshot Four"&gt;
+                        &lt;/div&gt;
+                        &lt;div class="col-sm-4"&gt;
+                            &lt;img src="Static/Assets/PixelKnight/pixelknightscreen5.png" class="img-thumbnail" alt="Pixel Knight Screenshot Five"&gt;
+                        &lt;/div&gt;
+                        &lt;div class="col-sm-4"&gt;
+                            &lt;img src="Static/Assets/PixelKnight/pixelknightscreen6.png" class="img-thumbnail" alt="Pixel Knight Screenshot Six"&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+
+                    &lt;hr id="video"/&gt;
+
+                    &lt;!-- Shows a video preview of the game --&gt;
+                    &lt;h2&gt;Video Preview&lt;/h2&gt;
+                    &lt;video width="640" height="380" preload="none" controls&gt;
+                        &lt;source src="Static/Assets/PixelKnight/PixelKnight.mp4"/&gt;
+                        Your browser is unable to play this video.
+                    &lt;/video&gt;
+
+                    &lt;hr id="code"/&gt;
+
+                    &lt;!-- Gives the source code for Pixel Knight --&gt;
+                    &lt;h2&gt;Pixel Knight Source Code&lt;/h2&gt;
+                    &lt;div&gt;
+                        &lt;!-- These are the buttons that change the tabs for the source code. By clicking a button, the user will change what source code is displayed. This is achieved by jQuery --&gt;
+                        &lt;div class="dropdown"&gt;
+                            &lt;button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"&gt;
+                                PixelKnight.java
+                            &lt;/button&gt;
+                            &lt;div class="dropdown-menu" aria-labelledby="dropdownMenuButton"&gt;
+                                &lt;a class="dropdown-item" data-val="0"&gt;PixelKnight.java&lt;/a&gt;
+                                &lt;a class="dropdown-item" data-val="1"&gt;GameScreen.java&lt;/a&gt;
+                                &lt;a class="dropdown-item" data-val="2"&gt;Storage.java&lt;/a&gt;
+                                &lt;a class="dropdown-item" data-val="3"&gt;World.java&lt;/a&gt;
+                                &lt;a class="dropdown-item" data-val="4"&gt;Level.java&lt;/a&gt;
+                                &lt;a class="dropdown-item" data-val="5"&gt;Platform.java&lt;/a&gt;
+                                &lt;a class="dropdown-item" data-val="6"&gt;Mud.java&lt;/a&gt;
+                                &lt;a class="dropdown-item" data-val="7"&gt;MudDoll.java&lt;/a&gt;
+                                &lt;a class="dropdown-item" data-val="8"&gt;MudSlinger.java&lt;/a&gt;
+                                &lt;a class="dropdown-item" data-val="9"&gt;Charger.java&lt;/a&gt;
+                                &lt;a class="dropdown-item" data-val="10"&gt;FloatingHead.java&lt;/a&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                        &lt;!-- This is where the actual source code is displayed. The source code is displayed via jQuery injectin of the corresponding HTML page. --&gt;
+                        &lt;div id="active-source"&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+
+                    &lt;hr id="downloads"/&gt;
+
+                    &lt;h3&gt;Downloads&lt;/h3&gt;
+                    &lt;!-- This image is used as a link to the github page for the Pixel Knight. --&gt;
+                    &lt;div class="row"&gt;
+                        &nbsp;&nbsp;&nbsp;
+                        &lt;a href="https://github.com/AkshaySG14/Pixel-Knight" target="_blank"&gt;
+                            &lt;i class="fa fa-github fa-4x" aria-hidden="true" title="Github Link"&gt;&lt;/i&gt;
+                        &lt;/a&gt;
+                        &nbsp;&nbsp;&nbsp;
+                        &lt;!-- The download link for the source code. Note that for the other pages, the game/application itself is used (with the exception of Traffic Director) --&gt;
+                        &lt;a href="Static/Assets/PixelKnight/PixelKnight.jar" target="_blank"&gt;
+                            &lt;i class="fa fa-download fa-4x" aria-hidden="true" title="Jar Download"&gt;&lt;/i&gt;
+                        &lt;/a&gt;
+                    &lt;/div&gt;
+                    &lt;br/&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;!-- Simple copyright + email address --&gt;
+        &lt;div class="footer text-center"&gt;
+            Copyright © Akshay Subramaniam -- Email Akshay.SG14@gmail.com for any issues
+        &lt;/div&gt;
+
+        &lt;script src="Static/js/main.js"&gt;&lt;/script&gt;
+
+        &lt;script&gt;
+            $(function() {
+                // Gets the div that houses the source code.
+                const activeSource = $("#active-source");
+                // Initialize variable responsible for deciding source code to display.
+                var source = 0;
+
+                // Renews the PrismJS script so that the code is properly highlighted.
+                function renewPrism() {
+                    $('script[src="Static/js/prism.js"]').remove();
+                    $('&lt;script&gt;').attr('src', "Static/js/prism.js").appendTo('head');
+                }
+
+                // Script responsible for setting the text of the source code being displayed.
+                function setScript() {
+                    switch (parseInt(source)) {
+                        case 0:
+                            // Sends an async request to load the relevant source code, and then reinitializes the
+                            // highlighting script (prism.js).
+                            activeSource.load('Static/SourceCode/PixelKnight/PixelKnight.html', renewPrism);
+                            break;
+                        case 1:
+                            activeSource.load('Static/SourceCode/PixelKnight/GameScreen.html', renewPrism);
+                            break;
+                        case 2:
+                            activeSource.load('Static/SourceCode/PixelKnight/Storage.html', renewPrism);
+                            break;
+                        case 3:
+                            activeSource.load('Static/SourceCode/PixelKnight/World.html', renewPrism);
+                            break;
+                        case 4:
+                            activeSource.load('Static/SourceCode/PixelKnight/Level.html', renewPrism);
+                            break;
+                        case 5:
+                            activeSource.load('Static/SourceCode/PixelKnight/Platform.html', renewPrism);
+                            break;
+                        case 6:
+                            activeSource.load('Static/SourceCode/PixelKnight/Mud.html', renewPrism);
+                            break;
+                        case 7:
+                            activeSource.load('Static/SourceCode/PixelKnight/MudDoll.html', renewPrism);
+                            break;
+                        case 8:
+                            activeSource.load('Static/SourceCode/PixelKnight/MudSlinger.html', renewPrism);
+                            break;
+                        case 9:
+                            activeSource.load('Static/SourceCode/PixelKnight/Charger.html', renewPrism);
+                            break;
+                        case 10:
+                            activeSource.load('Static/SourceCode/PixelKnight/FloatingHead.html', renewPrism);
+                            break;
+                    }
+                }
+
+                // Clears all the HTML of the source code div.
+                function clearScript() {
+                    activeSource.html("");
+                }
+
+                // When clicking a specific source code to view in the dropdown bar.
+                $(".dropdown-item").click(function () {
+                    $('#dropdownMenuButton').text($(this).text());
+                    source = $(this).attr('data-val');
+                    clearScript();
+                    setScript();
+                });
+                // Sets initial source code.
+                setScript();
+            });
+        &lt;/script&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>

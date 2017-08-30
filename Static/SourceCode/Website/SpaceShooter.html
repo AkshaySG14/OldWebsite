@@ -1,0 +1,301 @@
+<pre><code class="language-markup">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+    &lt;head&gt;
+        &lt;meta charset="UTF-8"&gt;
+        &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+        &lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
+        &lt;title&gt;Space Shooter&lt;/title&gt;
+        &lt;script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"&gt;&lt;/script&gt;
+        &lt;script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"&gt;&lt;/script&gt;
+        &lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"&gt;&lt;/script&gt;
+        &lt;script src="https://npmcdn.com/tether@1.2.4/dist/js/tether.min.js"&gt;&lt;/script&gt;
+        &lt;script src="Static/js/bootstrap.min.js"&gt;&lt;/script&gt;
+        &lt;script src="Static/js/prism.js"&gt;&lt;/script&gt;
+        &lt;script src="Static/js/jquery.waypoints.min.js"&gt;&lt;/script&gt;
+        &lt;script src="Static/js/underscore-min.js"&gt;&lt;/script&gt;
+        &lt;link href="Static/css/bootstrap.min.css" rel="stylesheet"&gt;
+        &lt;link href="Static/css/font-awesome.min.css" rel="stylesheet"&gt;
+        &lt;link href="Static/css/main.css" rel="stylesheet"&gt;
+        &lt;link href="Static/css/prism.css" rel="stylesheet"&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;!-- This is the navigation bar located at the top of the screen. It serves as a way for users to navigate to different web pages. Note
+        the usage of ID's for the stylesheet --&gt;
+        &lt;div id="summary"&gt;
+            &lt;nav class="navbar navbar-toggleable-md navbar-inverse bg-inverse fixed-top" id="main-navbar"&gt;
+                &lt;button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation"&gt;
+                    &lt;span class="navbar-toggler-icon"&gt;&lt;/span&gt;
+                &lt;/button&gt;
+                &lt;div class="collapse navbar-collapse" id="navbar"&gt;
+                    &lt;p class="navbar-brand"&gt;Apps&lt;/p&gt;
+                    &lt;ul class="navbar-nav mr-auto"&gt;
+                        &lt;li class="nav-item"&gt;
+                            &lt;a class="nav-link" href="index.html"&gt;Home&lt;/a&gt;
+                        &lt;/li&gt;
+                        &lt;li class="nav-item"&gt;
+                            &lt;a class="nav-link" href="Memori.html"&gt;Memori&lt;/a&gt;
+                        &lt;/li&gt;
+                        &lt;li class="nav-item"&gt;
+                            &lt;a class="nav-link" href="MagneticMotionDemo.html"&gt;Magnetic Motion Demo&lt;/a&gt;
+                        &lt;/li&gt;
+                        &lt;li class="nav-item"&gt;
+                            &lt;a class="nav-link" href="PixelKnight.html"&gt;Pixel Knight&lt;/a&gt;
+                        &lt;/li&gt;
+                        &lt;li class="nav-item"&gt;
+                            &lt;a class="nav-link" href="DarkAndLight.html"&gt;Dark and Light&lt;/a&gt;
+                        &lt;/li&gt;
+                        &lt;li class="nav-item"&gt;
+                            &lt;a class="nav-link" href="FatesReprise.html"&gt;Fate's Reprise&lt;/a&gt;
+                        &lt;/li&gt;
+                        &lt;li class="nav-item"&gt;
+                            &lt;a class="nav-link" href="ColorSynthesizer.html"&gt;Color Synthesizer&lt;/a&gt;
+                        &lt;/li&gt;
+                        &lt;li class="nav-item"&gt;
+                            &lt;a class="nav-link" href="DocumentEncryptor.html"&gt;Document Encryptor&lt;/a&gt;
+                        &lt;/li&gt;
+                        &lt;li class="nav-item"&gt;
+                            &lt;a class="nav-link" href="FileEncryptor.html"&gt;File Encryptor&lt;/a&gt;
+                        &lt;/li&gt;
+                        &lt;li class="nav-item"&gt;
+                            &lt;a class="nav-link" href="TrafficDirector.html"&gt;Traffic Director&lt;/a&gt;
+                        &lt;/li&gt;
+                        &lt;li class="nav-item active"&gt;
+                            &lt;a class="nav-link" href="SpaceShooter.html"&gt;Space Shooter&lt;/a&gt;
+                        &lt;/li&gt;
+                    &lt;/ul&gt;
+                &lt;/div&gt;
+            &lt;/nav&gt;
+        &lt;/div&gt;
+
+        &lt;div class="container-fluid"&gt;
+            &lt;div class="row"&gt;
+                &lt;!--Side Navbar--&gt;
+                &lt;div class="col-md-2 hidden-sm-down bg-faded"&gt;
+                    &lt;nav class="sidebar"&gt;
+                        &lt;ul class="nav nav-pills flex-column"&gt;
+                            &lt;br/&gt;
+                            &lt;li class="nav-item active" id="summary-pill"&gt;
+                                &lt;a class="nav-link" id="summary-link"&gt;Summary&lt;/a&gt;
+                            &lt;/li&gt;
+                            &lt;li class="nav-item" id="screenshots-pill"&gt;
+                                &lt;a class="nav-link" id="screenshots-link"&gt;Screenshots&lt;/a&gt;
+                            &lt;/li&gt;
+                            &lt;li class="nav-item" id="code-pill"&gt;
+                                &lt;a class="nav-link" id="code-link"&gt;Source Code&lt;/a&gt;
+                            &lt;/li&gt;
+                            &lt;li class="nav-item" id="downloads-pill"&gt;
+                                &lt;a class="nav-link" id="downloads-link"&gt;Downloads&lt;/a&gt;
+                            &lt;/li&gt;
+                        &lt;/ul&gt;
+                    &lt;/nav&gt;
+                &lt;/div&gt;
+                &lt;div class="col-md-10"&gt;
+                    &lt;br/&gt;
+                    &lt;h1&gt;
+                        Space Shooter
+                    &lt;/h1&gt;
+                    &lt;p&gt;
+                        Space Shooter is a desktop game that resembles a basic shooter platformer. It is a 2-D platformer where the player
+                        controls a small box that is able to shoot bullets. The game's objectives are simple: the player must reach the end
+                        door of each of the three levels and must take care to avoid enemies along the way to win. The game's premise and
+                        its controls are simple and easy to understand.
+                        &lt;br/&gt;&lt;br/&gt;
+                        Space Shooter is operated through the keyboard exclusively. The player uses the WASD keys to maneuver through the
+                        game, and J to shoot.
+                        &lt;br/&gt;&lt;br/&gt;
+                        The game was written in Ruby, and utilizes the Gosu framework for rendering the game. Unlike the other games I have
+                        made, excluding the drawing and rendering of the sprites in the game, the game engine was entirely designed by
+                        myself, from the creation of the manner through which the game is generated, to the way the game objects are
+                        rendered. What is seen on the screen was created through the combination of a pixel map and the use of a
+                        custom-made camera.
+                        &lt;br/&gt;&lt;br/&gt;
+                        NOTE: A MAC ONLY application is available for examination or for perusal. This application is essentially a Ruby
+                        launcher for the game.
+                    &lt;/p&gt;
+
+                    &lt;br/&gt;
+
+                    &lt;h3&gt;
+                        How and Why Space Shooter Was Made
+                    &lt;/h3&gt;
+
+                    &lt;p&gt;
+                        As my last game, Space Shooter was meant to serve as a way to familiarize myself with a more modern programming
+                        language - Ruby. Though decently similar to Python in my opinion, I found Ruby to be a very flexible and high-level
+                        language that allowed me to easily program a game (much unlike the wrestling matches with Java and C++). Using the
+                        Gosu development library PURELY for rendering, I created Space Shooter. The game itself has a CUSTOM-BUILT engine
+                        that was specifically made by me to make the creation of the game much simpler. This differs from my previous in
+                        that I built an engine from the ground-up to make the game much simpler.
+                        &lt;br/&gt;&lt;br/&gt;
+                        Language-wise, Space Shooter is written in Ruby and utilizes the Gosu development library. Due to its nearly
+                        complete originality, the code is a bit raw but entirely readable.
+                        &lt;br/&gt;
+                    &lt;/p&gt;
+
+                    &lt;hr id="screenshots"/&gt;
+
+                    &lt;!-- These images serve as screenshots of the game for the user to look at --&gt;
+                    &lt;h2&gt;Screenshots&lt;/h2&gt;
+                    &lt;div class="row"&gt;
+                        &lt;div class="col-sm-4"&gt;
+                            &lt;img src="Static/Assets/SpaceShooter/spaceshooterscreen1.png" class="img-thumbnail" alt="Space Shooter Screenshot One"&gt;
+                        &lt;/div&gt;
+                        &lt;div class="col-sm-4"&gt;
+                            &lt;img src="Static/Assets/SpaceShooter/spaceshooterscreen2.png" class="img-thumbnail" alt="Space Shooter Screenshot Two"&gt;
+                        &lt;/div&gt;
+                        &lt;div class="col-sm-4"&gt;
+                            &lt;img src="Static/Assets/SpaceShooter/spaceshooterscreen3.png" class="img-thumbnail" alt="Space Shooter Screenshot Three"&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;div class="row"&gt;
+                        &lt;div class="col-sm-4"&gt;
+                            &lt;img src="Static/Assets/SpaceShooter/spaceshooterscreen4.png" class="img-thumbnail" alt="Space Shooter Screenshot Four"&gt;
+                        &lt;/div&gt;
+                        &lt;div class="col-sm-4"&gt;
+                            &lt;img src="Static/Assets/SpaceShooter/spaceshooterscreen5.png" class="img-thumbnail" alt="Space Shooter Screenshot Five"&gt;
+                        &lt;/div&gt;
+                        &lt;div class="col-sm-4"&gt;
+                            &lt;img src="Static/Assets/SpaceShooter/spaceshooterscreen6.png" class="img-thumbnail" alt="Space Shooter Screenshot Six"&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;div class="row"&gt;
+                        &lt;div class="col-sm-4"&gt;
+                            &lt;img src="Static/Assets/SpaceShooter/spaceshooterscreen7.png" class="img-thumbnail" alt="Space Shooter Screenshot Seven"&gt;
+                        &lt;/div&gt;
+                        &lt;div class="col-sm-4"&gt;
+                            &lt;img src="Static/Assets/SpaceShooter/spaceshooterscreen8.png" class="img-thumbnail" alt="Space Shooter Screenshot Eight"&gt;
+                        &lt;/div&gt;
+                        &lt;div class="col-sm-4"&gt;
+                            &lt;img src="Static/Assets/SpaceShooter/spaceshooterscreen9.png" class="img-thumbnail" alt="Space Shooter Screenshot Nine"&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+
+                    &lt;hr id="code"&gt;
+
+                    &lt;!-- Gives the source code for Space Shooter --&gt;
+                    &lt;h2&gt;Space Shooter Source Code&lt;/h2&gt;
+                    &lt;div&gt;
+                        &lt;!-- These are the buttons that change the tabs for the source code. By clicking a button, the user will change what source code is displayed. This is achieved by jQuery --&gt;
+                        &lt;div class="dropdown"&gt;
+                            &lt;button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"&gt;
+                                Player.rb
+                            &lt;/button&gt;
+                            &lt;div class="dropdown-menu" aria-labelledby="dropdownMenuButton"&gt;
+                                &lt;a class="dropdown-item" data-val="0"&gt;Player.rb&lt;/a&gt;
+                                &lt;a class="dropdown-item" data-val="1"&gt;InputController.rb&lt;/a&gt;
+                                &lt;a class="dropdown-item" data-val="2"&gt;Camera.rb&lt;/a&gt;
+                                &lt;a class="dropdown-item" data-val="3"&gt;Map.rb&lt;/a&gt;
+                                &lt;a class="dropdown-item" data-val="4"&gt;MapObject.rb&lt;/a&gt;
+                                &lt;a class="dropdown-item" data-val="5"&gt;Enemy.rb&lt;/a&gt;
+                                &lt;a class="dropdown-item" data-val="6"&gt;Effect.rb&lt;/a&gt;
+                                &lt;a class="dropdown-item" data-val="7"&gt;Turret.rb&lt;/a&gt;
+                                &lt;a class="dropdown-item" data-val="8"&gt;Charger.rb&lt;/a&gt;
+                                &lt;a class="dropdown-item" data-val="9"&gt;XShooter.rb&lt;/a&gt;
+                                &lt;a class="dropdown-item" data-val="10"&gt;MissileLauncher.rb&lt;/a&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                        &lt;!-- This is where the actual source code is displayed. The source code is displayed via jQuery injectin of the corresponding HTML page. --&gt;
+                        &lt;div id="active-source"&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+
+                    &lt;hr id="downloads"/&gt;
+
+                    &lt;h3&gt;Downloads&lt;/h3&gt;
+                    &lt;!-- This image is used as a link to the github page for Space Shooter. --&gt;
+                    &lt;div class="row"&gt;
+                        &nbsp;&nbsp;&nbsp;
+                        &lt;a href="https://github.com/AkshaySG14/Space-Shooter" target="_blank"&gt;
+                            &lt;i class="fa fa-github fa-4x" aria-hidden="true" title="Github Link"&gt;&lt;/i&gt;
+                        &lt;/a&gt;
+                        &nbsp;&nbsp;&nbsp;
+                        &lt;!-- The download link for the source code. Note that for the other pages, the game/application itself is used (with the exception of Traffic Director) --&gt;
+                        &lt;a href="Static/Assets/SpaceShooter/SpaceShooter.zip" target="_blank"&gt;
+                            &lt;i class="fa fa-download fa-4x" aria-hidden="true" title="Mac Application Download"&gt;&lt;/i&gt;
+                        &lt;/a&gt;
+                    &lt;/div&gt;
+                    &lt;br/&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;!-- Simple copyright + email address --&gt;
+        &lt;div class="footer text-center"&gt;
+            Copyright © Akshay Subramaniam -- Email Akshay.SG14@gmail.com for any issues
+        &lt;/div&gt;
+
+        &lt;script src="Static/js/main.js"&gt;&lt;/script&gt;
+
+        &lt;script&gt;
+            $(function() {
+                // Gets the div that houses the source code.
+                const activeSource = $("#active-source");
+                // Initialize variable responsible for deciding source code to display.
+                var source = 0;
+
+                // Renews the PrismJS script so that the code is properly highlighted.
+                function renewPrism() {
+                    $('script[src="Static/js/prism.js"]').remove();
+                    $('&lt;script&gt;').attr('src', "Static/js/prism.js").appendTo('head');
+                }
+
+                // Script responsible for setting the text of the source code being displayed.
+                function setScript() {
+                    switch (parseInt(source)) {
+                        case 0:
+                            // Sends an async request to load the relevant source code, and then reinitializes the
+                            // highlighting script (prism.js).
+                            activeSource.load('Static/SourceCode/SpaceShooter/Player.html', renewPrism);
+                            break;
+                        case 1:
+                            activeSource.load('Static/SourceCode/SpaceShooter/InputController.html', renewPrism);
+                            break;
+                        case 2:
+                            activeSource.load('Static/SourceCode/SpaceShooter/Camera.html', renewPrism);
+                            break;
+                        case 3:
+                            activeSource.load('Static/SourceCode/SpaceShooter/Map.html', renewPrism);
+                            break;
+                        case 4:
+                            activeSource.load('Static/SourceCode/SpaceShooter/MapObject.html', renewPrism);
+                            break;
+                        case 5:
+                            activeSource.load('Static/SourceCode/SpaceShooter/Enemy.html', renewPrism);
+                            break;
+                        case 6:
+                            activeSource.load('Static/SourceCode/SpaceShooter/Effect.html', renewPrism);
+                            break;
+                        case 7:
+                            activeSource.load('Static/SourceCode/SpaceShooter/Turret.html', renewPrism);
+                            break;
+                        case 8:
+                            activeSource.load('Static/SourceCode/SpaceShooter/Charger.html', renewPrism);
+                            break;
+                        case 9:
+                            activeSource.load('Static/SourceCode/SpaceShooter/XShooter.html', renewPrism);
+                            break;
+                        case 10:
+                            activeSource.load('Static/SourceCode/SpaceShooter/MissileLauncher.html', renewPrism);
+                            break;
+                    }
+                }
+
+                // Clears all the HTML of the source code div.
+                function clearScript() {
+                    activeSource.html("");
+                }
+
+                // When clicking a specific source code to view in the dropdown bar.
+                $(".dropdown-item").click(function () {
+                    $('#dropdownMenuButton').text($(this).text());
+                    source = $(this).attr('data-val');
+                    clearScript();
+                    setScript();
+                });
+                // Sets initial source code.
+                setScript();
+            });
+        &lt;/script&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>

@@ -1,0 +1,258 @@
+<pre><code class="language-markup">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;!-- This is the home page of the Website and it contains all the links to the other pages --&gt;
+    &lt;head&gt;
+        &lt;meta charset="UTF-8"&gt;
+        &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+        &lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
+        &lt;title&gt;Akshay's Applications&lt;/title&gt;
+        &lt;script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"&gt;&lt;/script&gt;
+        &lt;script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"&gt;&lt;/script&gt;
+        &lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"&gt;&lt;/script&gt;
+        &lt;script src="https://npmcdn.com/tether@1.2.4/dist/js/tether.min.js"&gt;&lt;/script&gt;
+        &lt;script src="Static/js/bootstrap.min.js"&gt;&lt;/script&gt;
+        &lt;script src="Static/js/prism.js"&gt;&lt;/script&gt;
+        &lt;script src="Static/js/jquery.waypoints.min.js"&gt;&lt;/script&gt;
+        &lt;script src="Static/js/underscore-min.js"&gt;&lt;/script&gt;
+        &lt;link href="Static/css/bootstrap.min.css" rel="stylesheet"&gt;
+        &lt;link href="Static/css/font-awesome.min.css" rel="stylesheet"&gt;
+        &lt;link href="Static/css/main.css" rel="stylesheet"&gt;
+        &lt;link href="Static/css/prism.css" rel="stylesheet"&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+    &lt;!-- This is the navigation bar located at the top of the screen. It serves as a way for users to navigate to different web pages. Note
+    the usage of ID's for the stylesheet --&gt;
+        &lt;div id="summary"&gt;
+            &lt;nav class="navbar navbar-toggleable-md navbar-inverse bg-inverse fixed-top" id="main-navbar"&gt;
+                &lt;button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation"&gt;
+                    &lt;span class="navbar-toggler-icon"&gt;&lt;/span&gt;
+                &lt;/button&gt;
+                    &lt;div class="collapse navbar-collapse" id="navbar"&gt;
+                        &lt;p class="navbar-brand"&gt;Apps&lt;/p&gt;
+                        &lt;ul class="navbar-nav mr-auto"&gt;
+                            &lt;li class="nav-item active"&gt;
+                                &lt;a class="nav-link" href="index.html"&gt;Home&lt;/a&gt;
+                            &lt;/li&gt;
+                            &lt;li class="nav-item"&gt;
+                                &lt;a class="nav-link" href="Memori.html"&gt;Memori&lt;/a&gt;
+                            &lt;/li&gt;
+                            &lt;li class="nav-item"&gt;
+                                &lt;a class="nav-link" href="MagneticMotionDemo.html"&gt;Magnetic Motion Demo&lt;/a&gt;
+                            &lt;/li&gt;
+                            &lt;li class="nav-item"&gt;
+                                &lt;a class="nav-link" href="PixelKnight.html"&gt;Pixel Knight&lt;/a&gt;
+                            &lt;/li&gt;
+                            &lt;li class="nav-item"&gt;
+                                &lt;a class="nav-link" href="DarkAndLight.html"&gt;Dark and Light&lt;/a&gt;
+                            &lt;/li&gt;
+                            &lt;li class="nav-item"&gt;
+                                &lt;a class="nav-link" href="FatesReprise.html"&gt;Fate's Reprise&lt;/a&gt;
+                            &lt;/li&gt;
+                            &lt;li class="nav-item"&gt;
+                                &lt;a class="nav-link" href="ColorSynthesizer.html"&gt;Color Synthesizer&lt;/a&gt;
+                            &lt;/li&gt;
+                            &lt;li class="nav-item"&gt;
+                                &lt;a class="nav-link" href="DocumentEncryptor.html"&gt;Document Encryptor&lt;/a&gt;
+                            &lt;/li&gt;
+                            &lt;li class="nav-item"&gt;
+                                &lt;a class="nav-link" href="FileEncryptor.html"&gt;File Encryptor&lt;/a&gt;
+                            &lt;/li&gt;
+                            &lt;li class="nav-item"&gt;
+                                &lt;a class="nav-link" href="TrafficDirector.html"&gt;Traffic Director&lt;/a&gt;
+                            &lt;/li&gt;
+                            &lt;li class="nav-item"&gt;
+                                &lt;a class="nav-link" href="SpaceShooter.html"&gt;Space Shooter&lt;/a&gt;
+                            &lt;/li&gt;
+                        &lt;/ul&gt;
+                    &lt;/div&gt;
+            &lt;/nav&gt;
+        &lt;/div&gt;
+        &lt;div class="container-fluid"&gt;
+          &lt;div class="row"&gt;
+            &lt;!--Side Navbar--&gt;
+              &lt;div class="col-md-2 hidden-sm-down bg-faded"&gt;
+                  &lt;nav class="sidebar"&gt;
+                    &lt;ul class="nav nav-pills flex-column"&gt;
+                        &lt;br/&gt;
+                        &lt;li class="nav-item active" id="summary-pill"&gt;
+                            &lt;a class="nav-link" id="summary-link"&gt;Summary&lt;/a&gt;
+                        &lt;/li&gt;
+                        &lt;li class="nav-item" id="code-pill"&gt;
+                            &lt;a class="nav-link" id="code-link"&gt;Source Code&lt;/a&gt;
+                        &lt;/li&gt;
+                        &lt;li class="nav-item" id="downloads-pill"&gt;
+                            &lt;a class="nav-link" id="downloads-link"&gt;Downloads&lt;/a&gt;
+                        &lt;/li&gt;
+                    &lt;/ul&gt;
+                  &lt;/nav&gt;
+              &lt;/div&gt;
+              &lt;div class="col-md-10"&gt;
+                &lt;!-- The first text displayed. Welcomes the user to the page and expounds on the background of this Website --&gt;
+                &lt;br/&gt;
+                &lt;h1&gt;
+                    Welcome to Akshay's Applications
+                &lt;/h1&gt;
+
+                &lt;p&gt;
+                    My love for programming began in a very humble environment. Back around the early 2000's when I was very young,
+                    I used to program Warcraft III: The Frozen Throne games. Though my youthful inexperience prevented me from
+                    finishing the majority of my custom games, these early attempts sparked my passion for programming, and I learned a great deal of coding principles from working with the psuedo-language JASS.
+                    &lt;br/&gt;&lt;br/&gt;
+                    As I grew, I began to learn actual
+                    programming languages, and utilized my newly-gained knowledge to create the various programs on this site.
+                    These applications do not only serve as outlets for my love of programming, but also show how far I've come as a
+                    software developer since I began. They also greatly boosted my knowledge of each individual
+                    programming language and software development as a whole.
+                &lt;/p&gt;
+                &lt;p&gt;
+                    This site is a compilation of all the different projects I've worked on thus far. These have been written in a
+                    variety of languages and are based on different rendering engines.
+                    &lt;br/&gt;&lt;br/&gt;
+                    Note that these projects are coded without the use of any software to develop them such as GameSalad or other GameMakers. This
+                    means that they are for the most part written completely from scratch (some entirely so), and can be read solely
+                    based on knowledge accrued from study of the various programming languages.
+                &lt;/p&gt;
+
+                  &lt;!-- A small portion on how the Website was made --&gt;
+                &lt;br/&gt;
+                &lt;h3&gt;
+                    How This Website Was Made
+                &lt;/h3&gt;
+                &lt;p&gt;
+                    This site was made in HTML, CSS, and jQuery. It utilizes Bootstrap and FontAwesome for its design and images, and PrismJS and UnderscoreJS for some functions. Its code can be easily read and modified, and can serve
+                    as a beginner's learning tool. Its purpose was to help me learn and apply the basic techniques of web development, and to serve as a web
+                    portfolio for a look into my independent applications and how I code.
+                &lt;/p&gt;
+
+                &lt;hr id="code"/&gt;
+
+                  &lt;!-- Gives the source code for the Website --&gt;
+                &lt;h2&gt;Website Source Code&lt;/h2&gt;
+                  &lt;div&gt;
+                    &lt;!-- These are the buttons that change the tabs for the source code. By clicking a button, the user will change what source code is displayed. This is achieved by jQuery --&gt;
+                    &lt;div class="dropdown"&gt;
+                        &lt;button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"&gt;
+                            Home Page
+                        &lt;/button&gt;
+                        &lt;div class="dropdown-menu" aria-labelledby="dropdownMenuButton"&gt;
+                            &lt;a class="dropdown-item" data-val="0"&gt;Home Page&lt;/a&gt;
+                            &lt;a class="dropdown-item" data-val="1"&gt;Memori&lt;/a&gt;
+                            &lt;a class="dropdown-item" data-val="2"&gt;Magnetic Motion Demo&lt;/a&gt;
+                            &lt;a class="dropdown-item" data-val="3"&gt;Pixel Knight&lt;/a&gt;
+                            &lt;a class="dropdown-item" data-val="4"&gt;Dark and Light&lt;/a&gt;
+                            &lt;a class="dropdown-item" data-val="5"&gt;Fate's Reprise&lt;/a&gt;
+                            &lt;a class="dropdown-item" data-val="6"&gt;Color Synthesizer&lt;/a&gt;
+                            &lt;a class="dropdown-item" data-val="7"&gt;Document Encryptor&lt;/a&gt;
+                            &lt;a class="dropdown-item" data-val="8"&gt;File Encryptor&lt;/a&gt;
+                            &lt;a class="dropdown-item" data-val="9"&gt;Traffic Director&lt;/a&gt;
+                            &lt;a class="dropdown-item" data-val="10"&gt;Space Shooter&lt;/a&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                      &lt;!-- This is where the actual source code is displayed. The source code is displayed via script from third party software (Gist). As the code can only be loaded by the loading of the page (due to the external script), I made a useful albeit unoptimal script to omit the extraneous loaded scripts by setting their innerHTMLs to null (""). In simpler words, I simply wipe the information off the spans (which contain the actual source code) that I dont' need --&gt;
+                    &lt;div id="active-source"&gt;
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+
+                  &lt;hr id="downloads"/&gt;
+
+                  &lt;h3&gt;Downloads&lt;/h3&gt;
+                  &lt;!-- This image is used as a link to the github page for the WebSite. --&gt;
+                  &lt;div class="row"&gt;
+                      &nbsp;&nbsp;&nbsp;
+                      &lt;a href="https://github.com/AkshaySG14/AkshaySG14.github.io" target="_blank"&gt;
+                          &lt;i class="fa fa-github fa-4x" aria-hidden="true" title="Github Link"&gt;&lt;/i&gt;
+                      &lt;/a&gt;
+                      &nbsp;&nbsp;&nbsp;
+                      &lt;!-- The download link for the source code. Note that for the other pages, the game/application itself is used (with the exception of Traffic Director) --&gt;
+                      &lt;a href="Static/Assets/Website/SourceCode.zip" target="_blank"&gt;
+                          &lt;i class="fa fa-download fa-4x" aria-hidden="true" title="Source Code Download"&gt;&lt;/i&gt;
+                      &lt;/a&gt;
+                  &lt;/div&gt;
+                  &lt;br/&gt;
+              &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+
+    &lt;!-- Simple copyright + email address --&gt;
+        &lt;div class="footer text-center"&gt;
+            Copyright © Akshay Subramaniam -- Email Akshay.SG14@gmail.com for any issues
+        &lt;/div&gt;
+
+    &lt;script src="Static/js/main.js"&gt;&lt;/script&gt;
+
+    &lt;script&gt;
+        $(function() {
+            // Gets the div that houses the source code.
+            const activeSource = $("#active-source");
+            // Initialize variable responsible for deciding source code to display.
+            var source = 0;
+
+            // Renews the PrismJS script so that the code is properly highlighted.
+            function renewPrism() {
+                $('script[src="Static/js/prism.js"]').remove();
+                $('&lt;script&gt;').attr('src', "Static/js/prism.js").appendTo('head');
+            }
+
+            // Script responsible for setting the text of the source code being displayed.
+            function setScript() {
+                switch (parseInt(source)) {
+                    case 0:
+                        // Sends an async request to load the relevant source code, and then reinitializes the
+                        // highlighting script (prism.js).
+                        activeSource.load('Static/SourceCode/Website/HomePage.html', renewPrism);
+                        break;
+                    case 1:
+                        activeSource.load('Static/SourceCode/Website/Memori.html', renewPrism);
+                        break;
+                    case 2:
+                        activeSource.load('Static/SourceCode/Website/MagneticMotionDemo.html', renewPrism);
+                        break;
+                    case 3:
+                        activeSource.load('Static/SourceCode/Website/PixelKnight.html', renewPrism);
+                        break;
+                    case 4:
+                        activeSource.load('Static/SourceCode/Website/DarkAndLight.html', renewPrism);
+                        break;
+                    case 5:
+                        activeSource.load('Static/SourceCode/Website/FatesReprise.html', renewPrism);
+                        break;
+                    case 6:
+                        activeSource.load('Static/SourceCode/Website/ColorSynthesizer.html', renewPrism);
+                        break;
+                    case 7:
+                        activeSource.load('Static/SourceCode/Website/DocumentEncryptor.html', renewPrism);
+                        break;
+                    case 8:
+                        activeSource.load('Static/SourceCode/Website/FileEncryptor.html', renewPrism);
+                        break;
+                    case 9:
+                        activeSource.load('Static/SourceCode/Website/TrafficDirector.html', renewPrism);
+                        break;
+                    case 10:
+                        activeSource.load('Static/SourceCode/Website/SpaceShooter.html', renewPrism);
+                        break;
+
+                }
+            }
+
+            // Clears all the HTML of the source code div.
+            function clearScript() {
+                if (activeSource) {
+                    activeSource.html("");
+                }
+            }
+
+            // When clicking a specific source code to view in the dropdown bar.
+            $(".dropdown-item").click(function () {
+                $('#dropdownMenuButton').text($(this).text());
+                source = $(this).attr('data-val');
+                clearScript();
+                setScript();
+            });
+            // Sets initial source code.
+            setScript();
+        });
+        &lt;/script&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>

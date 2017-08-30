@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Dark and Light</title>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+        <script src="https://npmcdn.com/tether@1.2.4/dist/js/tether.min.js"></script>
+        <script src="Static/js/bootstrap.min.js"></script>
+        <script src="Static/js/prism.js"></script>
+        <script src="Static/js/jquery.waypoints.min.js"></script>
+        <script src="Static/js/underscore-min.js"></script>
+        <link href="Static/css/bootstrap.min.css" rel="stylesheet">
+        <link href="Static/css/font-awesome.min.css" rel="stylesheet">
+        <link href="Static/css/main.css" rel="stylesheet">
+        <link href="Static/css/prism.css" rel="stylesheet">
+    </head>
+    <body>
+        <!-- This is the navigation bar located at the top of the screen. It serves as a way for users to navigate to different web pages. Note
+        the usage of ID's for the stylesheet -->
+        <div id="summary">
+            <nav class="navbar navbar-toggleable-md navbar-inverse bg-inverse fixed-top" id="main-navbar">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbar">
+                    <p class="navbar-brand">Apps</p>
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="Memori.html">Memori</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="MagneticMotionDemo.html">Magnetic Motion Demo</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="PixelKnight.html">Pixel Knight</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="DarkAndLight.html">Dark and Light</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="FatesReprise.html">Fate's Reprise</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="ColorSynthesizer.html">Color Synthesizer</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="DocumentEncryptor.html">Document Encryptor</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="FileEncryptor.html">File Encryptor</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="TrafficDirector.html">Traffic Director</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="SpaceShooter.html">Space Shooter</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+
+        <div class="container-fluid">
+            <div class="row">
+                <!--Side Navbar-->
+                <div class="col-md-2 hidden-sm-down bg-faded">
+                    <nav class="sidebar">
+                        <ul class="nav nav-pills flex-column">
+                            <br/>
+                            <li class="nav-item active" id="summary-pill">
+                                <a class="nav-link" id="summary-link">Summary</a>
+                            </li>
+                            <li class="nav-item" id="screenshots-pill">
+                                <a class="nav-link" id="screenshots-link">Screenshots</a>
+                            </li>
+                            <li class="nav-item" id="code-pill">
+                                <a class="nav-link" id="code-link">Source Code</a>
+                            </li>
+                            <li class="nav-item" id="downloads-pill">
+                                <a class="nav-link" id="downloads-link">Downloads</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="col-md-10">
+                    <br/>
+                    <h1>
+                        Dark and Light
+                    </h1>
+                    <p>
+                        Dark and Light is a light-based game that is quite simple to operate. The player controls one small green ball that
+                        can move in any direction. Because the game takes place in complete darkness, the player can also switch on and off
+                        a green flash light. However, the player does not only have to contend with darkness alone, he is also antagonized
+                        by numerous enemies who use different shades of light to injure the player. Navigating through the darkness, the
+                        player must reach the end of the level safely, solving puzzles and dodging enemies along the way.
+                        <br/><br/>
+                        The game can only be played through the use of a computer (either Mac or PC), and is run through a Java jar.
+                        Both a keyboard and a mouse are necessary to play this game. Language-wise, the game is written solely in Java, and
+                        utilizes the Libgdx framework, as well as the box2d and box2dlight extensions. The programming behind the game consists
+                        mainly of math, in the areas of both physics and geometry. Despite this, the game only requries an elementary
+                        understanding of math to comprehend, and the code itself is not terribly difficult to comprehend.
+                        <br/><br/>
+                        The basic controls of the game are as follows: WASD keys for movement and a mouse for rotating the flashlight and
+                        turning it on/off.
+                    </p>
+
+                    <br/>
+
+                    <h3>
+                        How and Why Dark and Light Was Made
+                    </h3>
+
+                    <p>
+                        Dark and Light was a project made to play with the Box2D phyiscs and lights library. As I had never used lighting
+                        or serious physics in my previous applications, I wished to experiment with these concepts in code. The game itself
+                        makes extensive use of the Box2D library, and uses real force concepts to create the lighting and physics effects.
+                        <br/><br/>
+                        Language-wise, Dark and Light is completely written in Java, and is built upon the Libgdx and Box2D Java libraries.
+                        However, Libgdx is mostly used for the rendering of the sprites and the background, and thus is largely unnecessary to
+                        understand the code of this game. Similarly Box2D is only used for rendering and some movement. The game can be
+                        understood with a decent understanding of Java, and can be read and used as a learning tool.
+                        <br/>
+                    </p>
+
+                    <hr id="screenshots"/>
+
+                    <!-- These images serve as screenshots of the game for the user to look at -->
+                    <h2>Screenshots</h2>
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <img src="Static/Assets/DarkAndLight/darkandlightscreen1.png" class="img-thumbnail" alt="Dark and Light Screenshot One">
+                        </div>
+                        <div class="col-sm-4">
+                            <img src="Static/Assets/DarkAndLight/darkandlightscreen2.png" class="img-thumbnail" alt="Dark and Light Screenshot Two">
+                        </div>
+                        <div class="col-sm-4">
+                            <img src="Static/Assets/DarkAndLight/darkandlightscreen3.png" class="img-thumbnail" alt="Dark and Light Screenshot Three">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <img src="Static/Assets/DarkAndLight/darkandlightscreen4.png" class="img-thumbnail" alt="Dark and Light Screenshot Four">
+                        </div>
+                        <div class="col-sm-4">
+                            <img src="Static/Assets/DarkAndLight/darkandlightscreen5.png" class="img-thumbnail" alt="Dark and Light Screenshot Five">
+                        </div>
+                        <div class="col-sm-4">
+                            <img src="Static/Assets/DarkAndLight/darkandlightscreen6.png" class="img-thumbnail" alt="Dark and Light Screenshot Six">
+                        </div>
+                    </div>
+
+                    <hr id="code"/>
+
+                    <!-- Gives the source code for Dark and Light -->
+                    <h2>Dark and Light Source Code</h2>
+                    <div>
+                        <!-- These are the buttons that change the tabs for the source code. By clicking a button, the user will change what source code is displayed. This is achieved by jQuery -->
+                        <div class="dropdown">
+                            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Player.java
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <a class="dropdown-item" data-val="0">Player.java</a>
+                                <a class="dropdown-item" data-val="1">PlayerHead.java</a>
+                                <a class="dropdown-item" data-val="2">Character.java</a>
+                                <a class="dropdown-item" data-val="3">GameScreen.java</a>
+                                <a class="dropdown-item" data-val="4">Creator.java</a>
+                                <a class="dropdown-item" data-val="5">LightHandler.java</a>
+                                <a class="dropdown-item" data-val="6">PhysicsContactListener.java</a>
+                                <a class="dropdown-item" data-val="7">LightBox.java</a>
+                                <a class="dropdown-item" data-val="8">RedLighter.java</a>
+                                <a class="dropdown-item" data-val="9">YellowLighter.java</a>
+                                <a class="dropdown-item" data-val="10">OrangeLighter.java</a>
+                            </div>
+                        </div>
+                        <!-- This is where the actual source code is displayed. The source code is displayed via jQuery injectin of the corresponding HTML page. -->
+                        <div id="active-source">
+                        </div>
+                    </div>
+
+                    <hr id="downloads"/>
+
+                    <h3>Downloads</h3>
+                    <!-- This image is used as a link to the github page for the Dark and Light. -->
+                    <div class="row">
+                        &nbsp;&nbsp;&nbsp;
+                        <a href="https://github.com/AkshaySG14/Dark-and-Light" target="_blank">
+                            <i class="fa fa-github fa-4x" aria-hidden="true" title="Github Link"></i>
+                        </a>
+                        &nbsp;&nbsp;&nbsp;
+                        <!-- The download link for the source code. Note that for the other pages, the game/application itself is used (with the exception of Traffic Director) -->
+                        <a href="Static/Assets/DarkAndLight/DarkAndLight.jar" target="_blank">
+                            <i class="fa fa-download fa-4x" aria-hidden="true" title="Jar Download"></i>
+                        </a>
+                    </div>
+                    <br/>
+                </div>
+            </div>
+        </div>
+
+        <!-- Simple copyright + email address -->
+        <div class="footer text-center">
+            Copyright © Akshay Subramaniam -- Email Akshay.SG14@gmail.com for any issues
+        </div>
+
+        <script src="Static/js/main.js"></script>
+
+        <script>
+            $(function() {
+                // Gets the div that houses the source code.
+                const activeSource = $("#active-source");
+                // Initialize variable responsible for deciding source code to display.
+                var source = 0;
+
+                // Renews the PrismJS script so that the code is properly highlighted.
+                function renewPrism() {
+                    $('script[src="Static/js/prism.js"]').remove();
+                    $('<script>').attr('src', "Static/js/prism.js").appendTo('head');
+                }
+
+                // Script responsible for setting the text of the source code being displayed.
+                function setScript() {
+                    switch (parseInt(source)) {
+                        case 0:
+                            // Sends an async request to load the relevant source code, and then reinitializes the
+                            // highlighting script (prism.js).
+                            activeSource.load('Static/SourceCode/DarkAndLight/Player.html', renewPrism);
+                            break;
+                        case 1:
+                            activeSource.load('Static/SourceCode/DarkAndLight/PlayerHead.html', renewPrism);
+                            break;
+                        case 2:
+                            activeSource.load('Static/SourceCode/DarkAndLight/Character.html', renewPrism);
+                            break;
+                        case 3:
+                            activeSource.load('Static/SourceCode/DarkAndLight/GameScreen.html', renewPrism);
+                            break;
+                        case 4:
+                            activeSource.load('Static/SourceCode/DarkAndLight/Creator.html', renewPrism);
+                            break;
+                        case 5:
+                            activeSource.load('Static/SourceCode/DarkAndLight/LightHandler.html', renewPrism);
+                            break;
+                        case 6:
+                            activeSource.load('Static/SourceCode/DarkAndLight/PhysicsContactListener.html', renewPrism);
+                            break;
+                        case 7:
+                            activeSource.load('Static/SourceCode/DarkAndLight/LightBox.html', renewPrism);
+                            break;
+                        case 8:
+                            activeSource.load('Static/SourceCode/DarkAndLight/RedLighter.html', renewPrism);
+                            break;
+                        case 9:
+                            activeSource.load('Static/SourceCode/DarkAndLight/YellowLighter.html', renewPrism);
+                            break;
+                        case 10:
+                            activeSource.load('Static/SourceCode/DarkAndLight/OrangeLighter.html', renewPrism);
+                            break;
+                    }
+                }
+
+                // Clears all the HTML of the source code div.
+                function clearScript() {
+                    activeSource.html("");
+                }
+
+                // When clicking a specific source code to view in the dropdown bar.
+                $(".dropdown-item").click(function () {
+                    $('#dropdownMenuButton').text($(this).text());
+                    source = $(this).attr('data-val');
+                    clearScript();
+                    setScript();
+                });
+                // Sets initial source code.
+                setScript();
+            });
+        </script>
+    </body>
+</html>
