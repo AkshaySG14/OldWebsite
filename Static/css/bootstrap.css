@@ -6120,11 +6120,11 @@ a.bg-danger:focus, a.bg-danger:hover {
   background-color: #c9302c !important;
 }
 
-.bg-inverse fixed-top {
+.bg-primary fixed-top {
   background-color: #292b2c !important;
 }
 
-a.bg-inverse fixed-top:focus, a.bg-inverse fixed-top:hover {
+a.bg-primary fixed-top:focus, a.bg-primary fixed-top:hover {
   background-color: #101112 !important;
 }
 
