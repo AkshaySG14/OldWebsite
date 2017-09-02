@@ -3,13 +3,6 @@ $(function() {
     const navbarHeight = $("#main-navbar").outerHeight();
     // Boolean for determining if window is at the bottom of the page.
     var pageBottom = false;
-    // For moving elements below the navbar
-    $(window).resize(function () {
-        $('body').css('padding-top', $('#main-navbar').height() + 10);
-    });
-    $(window).load(function () {
-        $('body').css('padding-top', $('#main-navbar').height() + 10);
-    });
     // Upon clicking on the horizontal bar, scrolls to respective element.
     $("#summary-link").click(function() {
         $('html body').animate({

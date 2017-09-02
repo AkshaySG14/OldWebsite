@@ -3,29 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="7037eb67-7fa7-43f2-998c-b2067373c9b6" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ColorSynthesizer.html" afterPath="$PROJECT_DIR$/ColorSynthesizer.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DarkAndLight.html" afterPath="$PROJECT_DIR$/DarkAndLight.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DocumentEncryptor.html" afterPath="$PROJECT_DIR$/DocumentEncryptor.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FatesReprise.html" afterPath="$PROJECT_DIR$/FatesReprise.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FileEncryptor.html" afterPath="$PROJECT_DIR$/FileEncryptor.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MagneticMotionDemo.html" afterPath="$PROJECT_DIR$/MagneticMotionDemo.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Memori.html" afterPath="$PROJECT_DIR$/Memori.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PixelKnight.html" afterPath="$PROJECT_DIR$/PixelKnight.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SpaceShooter.html" afterPath="$PROJECT_DIR$/SpaceShooter.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Static/SourceCode/Website/ColorSynthesizer.html" afterPath="$PROJECT_DIR$/Static/SourceCode/Website/ColorSynthesizer.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Static/SourceCode/Website/DarkAndLight.html" afterPath="$PROJECT_DIR$/Static/SourceCode/Website/DarkAndLight.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Static/SourceCode/Website/DocumentEncryptor.html" afterPath="$PROJECT_DIR$/Static/SourceCode/Website/DocumentEncryptor.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Static/SourceCode/Website/FatesReprise.html" afterPath="$PROJECT_DIR$/Static/SourceCode/Website/FatesReprise.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Static/SourceCode/Website/FileEncryptor.html" afterPath="$PROJECT_DIR$/Static/SourceCode/Website/FileEncryptor.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Static/SourceCode/Website/HomePage.html" afterPath="$PROJECT_DIR$/Static/SourceCode/Website/HomePage.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Static/SourceCode/Website/MagneticMotionDemo.html" afterPath="$PROJECT_DIR$/Static/SourceCode/Website/MagneticMotionDemo.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Static/SourceCode/Website/Memori.html" afterPath="$PROJECT_DIR$/Static/SourceCode/Website/Memori.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Static/SourceCode/Website/PixelKnight.html" afterPath="$PROJECT_DIR$/Static/SourceCode/Website/PixelKnight.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Static/SourceCode/Website/SpaceShooter.html" afterPath="$PROJECT_DIR$/Static/SourceCode/Website/SpaceShooter.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Static/SourceCode/Website/TrafficDirector.html" afterPath="$PROJECT_DIR$/Static/SourceCode/Website/TrafficDirector.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Static/css/main.css" afterPath="$PROJECT_DIR$/Static/css/main.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Static/js/main.js" afterPath="$PROJECT_DIR$/Static/js/main.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TrafficDirector.html" afterPath="$PROJECT_DIR$/TrafficDirector.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -39,11 +18,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="ColorSynthesizer.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/ColorSynthesizer.html">
+      <file leaf-file-name="main.css" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Static/css/main.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="83">
-              <caret line="73" column="15" lean-forward="false" selection-start-line="73" selection-start-column="15" selection-end-line="73" selection-end-column="15" />
+            <state relative-caret-position="90">
+              <caret line="6" column="22" lean-forward="true" selection-start-line="6" selection-start-column="22" selection-end-line="6" selection-end-column="22" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Static/js/main.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="60">
+              <caret line="4" column="27" lean-forward="false" selection-start-line="4" selection-start-column="27" selection-end-line="4" selection-end-column="27" />
               <folding />
             </state>
           </provider>
@@ -73,9 +62,10 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Static/css/main.css" />
         <option value="$PROJECT_DIR$/Static/SourceCode/Website/ColorSynthesizer.html" />
         <option value="$PROJECT_DIR$/ColorSynthesizer.html" />
+        <option value="$PROJECT_DIR$/Static/js/main.js" />
+        <option value="$PROJECT_DIR$/Static/css/main.css" />
       </list>
     </option>
   </component>
@@ -105,7 +95,6 @@
     </navigator>
     <panes>
       <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -118,10 +107,23 @@
               <item name="AkshaySG14" type="462c0819:PsiDirectoryNode" />
               <item name="Static" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="AkshaySG14" type="b2602c69:ProjectViewProjectNode" />
+              <item name="AkshaySG14" type="462c0819:PsiDirectoryNode" />
+              <item name="Static" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="AkshaySG14" type="b2602c69:ProjectViewProjectNode" />
+              <item name="AkshaySG14" type="462c0819:PsiDirectoryNode" />
+              <item name="Static" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -157,11 +159,13 @@
       <workItem from="1504123980549" duration="634000" />
       <workItem from="1504134146095" duration="24000" />
       <workItem from="1504283006255" duration="475000" />
+      <workItem from="1504367346898" duration="215000" />
+      <workItem from="1504369473577" duration="288000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1133000" />
+    <option name="totallyTimeSpent" value="1636000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -170,7 +174,6 @@
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.026666667" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -182,6 +185,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.026666667" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -204,11 +208,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/ColorSynthesizer.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ColorSynthesizer.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Static/css/main.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
           <caret line="22" column="0" lean-forward="true" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -224,7 +243,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
           <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -232,25 +250,29 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="250">
           <caret line="86" column="14" lean-forward="false" selection-start-line="86" selection-start-column="14" selection-end-line="86" selection-end-column="14" />
-          <folding>
-            <element signature="e#5430#5434#0" expanded="true" />
-            <element signature="e#5469#5473#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Static/css/main.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ColorSynthesizer.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="83">
-          <caret line="73" column="15" lean-forward="false" selection-start-line="73" selection-start-column="15" selection-end-line="73" selection-end-column="15" />
+        <state relative-caret-position="-3332">
+          <caret line="13" column="43" lean-forward="false" selection-start-line="13" selection-start-column="43" selection-end-line="13" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Static/js/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="27" lean-forward="false" selection-start-line="4" selection-start-column="27" selection-end-line="4" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Static/css/main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="22" lean-forward="true" selection-start-line="6" selection-start-column="22" selection-end-line="6" selection-end-column="22" />
           <folding />
         </state>
       </provider>
