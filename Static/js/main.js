@@ -35,9 +35,9 @@ $(function() {
         }, 500);
     });
 
-    $("#downloads-link").click(function() {
+    $("#links-link").click(function() {
         $('html, body').animate({
-            scrollTop: $("#downloads").offset().top - navbarHeight
+            scrollTop: $("#links").offset().top - navbarHeight
         }, 500);
     });
     // Changes the active element on the horizontal bar depending on whenever the screen has currently been
@@ -89,7 +89,7 @@ $(function() {
     // Sets only specific horizontal navbar element to active.
     function setActiveLink(element) {
         $("#summary-pill").removeClass("active");
-        $("#downloads-pill").removeClass("active");
+        $("#links-pill").removeClass("active");
         $("#screenshots-pill").removeClass("active");
         $("#video-pill").removeClass("active");
         $("#code-pill").removeClass("active");
@@ -110,7 +110,7 @@ $(function() {
     $(window).scroll(_.throttle(function() {
         if ($(window).scrollTop() + $(window).innerHeight() >= getDocHeight()) {
             pageBottom = true;
-            setActiveLink($("#downloads-pill"));
+            setActiveLink($("#links-pill"));
         }
         else if (pageBottom) {
             pageBottom = false;
