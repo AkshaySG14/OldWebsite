@@ -5,13 +5,13 @@ $(function() {
     var pageBottom = false;
     // Upon clicking on the horizontal bar, scrolls to respective element.
     $("#summary-link").click(function() {
-        $('html body').animate({
+        $('html, body').animate({
             scrollTop: $("#summary").offset().top - navbarHeight
         }, 500);
     });
 
     $("#screenshots-link").click(function() {
-        $('html body').animate({
+        $('html, body').animate({
             scrollTop: $("#screenshots").offset().top - navbarHeight
         }, 500);
     });
