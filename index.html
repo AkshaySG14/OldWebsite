@@ -29,9 +29,18 @@
                 </button>
                     <div class="collapse navbar-collapse" id="navbar">
                         <p class="navbar-brand">Apps</p>
-                        <ul class="navbar-nav mr-auto">
+                        <ul class="nav navbar-nav nav-fill">
                             <li class="nav-item active">
                                 <a class="nav-link" href="index.html">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="FatesReprise.html">Fate's Reprise</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="MapBlue.html">Map Blue</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="DarkAndLight.html">Dark and Light</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="Memori.html">Memori</a>
@@ -41,12 +50,6 @@
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="PixelKnight.html">Pixel Knight</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="DarkAndLight.html">Dark and Light</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="FatesReprise.html">Fate's Reprise</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="ColorSynthesizer.html">Color Synthesizer</a>
@@ -136,16 +139,18 @@
                         </button>
                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                             <a class="dropdown-item" data-val="0">Home Page</a>
-                            <a class="dropdown-item" data-val="1">Memori</a>
-                            <a class="dropdown-item" data-val="2">Magnetic Motion Demo</a>
-                            <a class="dropdown-item" data-val="3">Pixel Knight</a>
-                            <a class="dropdown-item" data-val="4">Dark and Light</a>
-                            <a class="dropdown-item" data-val="5">Fate's Reprise</a>
-                            <a class="dropdown-item" data-val="6">Color Synthesizer</a>
-                            <a class="dropdown-item" data-val="7">Document Encryptor</a>
-                            <a class="dropdown-item" data-val="8">File Encryptor</a>
-                            <a class="dropdown-item" data-val="9">Traffic Director</a>
-                            <a class="dropdown-item" data-val="10">Space Shooter</a>
+                            <a class="dropdown-item" data-val="1">Fate's Reprise</a>
+                            <a class="dropdown-item" data-val="2">Map Blue</a>
+                            <a class="dropdown-item" data-val="3">Dark and Light</a>
+                            <a class="dropdown-item" data-val="4">Memori</a>
+                            <a class="dropdown-item" data-val="5">Magnetic Motion Demo</a>
+                            <a class="dropdown-item" data-val="6">Pixel Knight</a>
+                            <a class="dropdown-item" data-val="7">Color Synthesizer</a>
+                            <a class="dropdown-item" data-val="8">Document Encryptor</a>
+                            <a class="dropdown-item" data-val="9">File Encryptor</a>
+                            <a class="dropdown-item" data-val="19">Traffic Director</a>
+                            <a class="dropdown-item" data-val="11">Space Shooter</a>
+
                         </div>
                     </div>
                     <!-- This is where the actual source code is displayed. The source code is displayed via script from third party software (Gist). As the code can only be loaded by the loading of the page (due to the external script), I made a useful albeit unoptimal script to omit the extraneous loaded scripts by setting their innerHTMLs to null (""). In simpler words, I simply wipe the information off the spans (which contain the actual source code) that I dont' need -->
@@ -202,33 +207,36 @@
                         activeSource.load('Static/SourceCode/Website/HomePage.html', renewPrism);
                         break;
                     case 1:
-                        activeSource.load('Static/SourceCode/Website/Memori.html', renewPrism);
-                        break;
-                    case 2:
-                        activeSource.load('Static/SourceCode/Website/MagneticMotionDemo.html', renewPrism);
-                        break;
-                    case 3:
-                        activeSource.load('Static/SourceCode/Website/PixelKnight.html', renewPrism);
-                        break;
-                    case 4:
-                        activeSource.load('Static/SourceCode/Website/DarkAndLight.html', renewPrism);
-                        break;
-                    case 5:
                         activeSource.load('Static/SourceCode/Website/FatesReprise.html', renewPrism);
                         break;
+                    case 2:
+                        activeSource.load('Static/SourceCode/Website/MapBlue.html', renewPrism);
+                        break;
+                    case 3:
+                        activeSource.load('Static/SourceCode/Website/DarkAndLight.html', renewPrism);
+                        break;
+                    case 4:
+                        activeSource.load('Static/SourceCode/Website/Memori.html', renewPrism);
+                        break;
+                    case 5:
+                        activeSource.load('Static/SourceCode/Website/MagneticMotionDemo.html', renewPrism);
+                        break;
                     case 6:
-                        activeSource.load('Static/SourceCode/Website/ColorSynthesizer.html', renewPrism);
+                        activeSource.load('Static/SourceCode/Website/PixelKnight.html', renewPrism);
                         break;
                     case 7:
-                        activeSource.load('Static/SourceCode/Website/DocumentEncryptor.html', renewPrism);
+                        activeSource.load('Static/SourceCode/Website/ColorSynthesizer.html', renewPrism);
                         break;
                     case 8:
-                        activeSource.load('Static/SourceCode/Website/FileEncryptor.html', renewPrism);
+                        activeSource.load('Static/SourceCode/Website/DocumentEncryptor.html', renewPrism);
                         break;
                     case 9:
-                        activeSource.load('Static/SourceCode/Website/TrafficDirector.html', renewPrism);
+                        activeSource.load('Static/SourceCode/Website/FileEncryptor.html', renewPrism);
                         break;
                     case 10:
+                        activeSource.load('Static/SourceCode/Website/TrafficDirector.html', renewPrism);
+                        break;
+                    case 11:
                         activeSource.load('Static/SourceCode/Website/SpaceShooter.html', renewPrism);
                         break;
 

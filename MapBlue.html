@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Map Blue</title>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+        <script src="https://npmcdn.com/tether@1.2.4/dist/js/tether.min.js"></script>
+        <script src="Static/js/bootstrap.min.js"></script>
+        <script src="Static/js/prism.js"></script>
+        <script src="Static/js/jquery.waypoints.min.js"></script>
+        <script src="Static/js/underscore-min.js"></script>
+        <link href="Static/css/bootstrap.min.css" rel="stylesheet">
+        <link href="Static/css/font-awesome.min.css" rel="stylesheet">
+        <link href="Static/css/main.css" rel="stylesheet">
+        <link href="Static/css/prism.css" rel="stylesheet">
+    </head>
+    <body>
+        <!-- This is the navigation bar located at the top of the screen. It serves as a way for users to navigate to different web pages. Note
+        the usage of ID's for the stylesheet -->
+        <div id="summary">
+            <nav class="navbar navbar-toggleable-md navbar-inverse bg-primary fixed-top" id="main-navbar">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbar">
+                    <p class="navbar-brand">Apps</p>
+                    <ul class="nav navbar-nav nav-fill">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="FatesReprise.html">Fate's Reprise</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="MapBlue.html">Map Blue</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="DarkAndLight.html">Dark and Light</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="Memori.html">Memori</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="MagneticMotionDemo.html">Magnetic Motion Demo</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="PixelKnight.html">Pixel Knight</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="ColorSynthesizer.html">Color Synthesizer</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="DocumentEncryptor.html">Document Encryptor</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="FileEncryptor.html">File Encryptor</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="TrafficDirector.html">Traffic Director</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="SpaceShooter.html">Space Shooter</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+
+        <div class="container-fluid">
+            <div class="row">
+                <!--Side Navbar-->
+                <div class="col-md-2 hidden-sm-down bg-faded">
+                    <nav class="sidebar">
+                        <ul class="nav nav-pills flex-column">
+                            <br/>
+                            <li class="nav-item active" id="summary-pill">
+                                <a class="nav-link" id="summary-link">Summary</a>
+                            </li>
+                            <li class="nav-item" id="screenshots-pill">
+                                <a class="nav-link" id="screenshots-link">Screenshots</a>
+                            </li>
+                            <li class="nav-item" id="video-pill">
+                                <a class="nav-link" id="video-link">Video</a>
+                            </li>
+                            <li class="nav-item" id="code-pill">
+                                <a class="nav-link" id="code-link">Source Code</a>
+                            </li>
+                            <li class="nav-item" id="links-pill">
+                                <a class="nav-link" id="links-link">Links</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="col-md-10">
+                    <br/>
+                    <h1>
+                        Map Blue
+                    </h1>
+                    <p>
+                        Map Blue is an iOS app that was made during the first-year University of Michigan course ENGR 100. A
+                        collaborative effort, Map Blue was developed by my ENGR 100 team - consisting of University of Michigan engineers Nadya Barghouty, James Jiang,
+                        Sharon Sun, and Akshay Subramaniam.
+                        <br/><br/>
+                        Designed to be a simple app, Map Blue itself features only four screens: a building screen, a room screen, and a
+                        primary/secondary map screen. The building screen is where users can select the building for which they wish to be given a
+                        map and proper directions, although only one building, the EECS building, has been fully fleshed out.
+                        The room screen is where the user selects which room they are coming from, and
+                        which room they wish to go to. The main reason for the design decision behind the user manually entering their location, rather
+                        than tracking their location and only asking for their destination, was
+                        that it was immensely difficult to accurately keep track of a user's location inside of a building via geolocation. The second reason behind it
+                        was that if the user were to have spotty connection while their location was being determined via geolocation,
+                        it would greatly hamper efforts to guide them. Thus, requiring the user to enter their current location and destination
+                        eliminated the difficulty of tracking their location via GPS, and prevented a spotty connection from frustrating users.
+                        <br/><br/>
+                        The final two screens, the primary and secondary map
+                        screens, show electronic displays of the building floorplans for the building the user has selected. The primary map
+                        screen shows the layout of the floor the user is on and the directions the user needs to get from their
+                        current location to their destination (or the stairs leading to their destination should it lie on another floor).
+                        On the other hand, the secondary, and potentially unneeded, map screen shows the second floor the user must traverse with corresponding
+                        directions.
+                        <br/><br/>
+                        To try out this mobile app, one can download the simulation files and run it via Xcode,
+                        either through the iPhone simulator or directly on a device that uses iOS.
+                    </p>
+
+                    <br/>
+
+                    <h3>
+                        How and Why Map Blue Was Made
+                    </h3>
+
+                    <p>
+                        Map Blue was our final group project for ENGR 100 - Urban Mobility. It was about a month-long endeavor
+                        whose purpose was to construct a mobility-focused app that could assist University of Michigan students.
+                        After noticing that the EECS, Dow, and GG Brown buildings were challenging for students to navigate through,
+                        especially for new students, we designed and developed Map Blue, an app that specifically
+                        targeted improving mobility indoors. Although we did not manage to fully flesh out the app, we did succeed in
+                        creating a function app that was tested with actual users, and creating a full presentation and display for it.
+
+                        <br/><br/>
+                        On the more technical side, Map Blue was an iOS app entirely designed in Swift. It was made as an
+                        iOS app because the team felt that Swift and iOS app
+                        development as a whole was a fast, efficient, and easy way to develop an app that would reach a large
+                        amount of users. Though a little rough around the edges due to time constrains, Map Blue has a robust
+                        and extensible software architecture that could easily form the base of a fully functional and useful app. Developing
+                        Map Blue also certainly taught me how to properly design an iOS app, and create a flexible and efficient
+                        architecture in Swift that serves the user's needs in milliseconds.
+                        <br/>
+                    </p>
+
+                    <hr id="screenshots"/>
+
+                    <h2>Screenshots</h2>
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <img src="Static/Assets/MapBlue/mapbluescreen1.png" class="img-fluid" alt="Map Blue Screenshot One">
+                        </div>
+                        <div class="col-sm-3">
+                            <img src="Static/Assets/MapBlue/mapbluescreen2.png" class="img-fluid" alt="Map Blue Screenshot Two">
+                        </div>
+                        <div class="col-sm-3">
+                            <img src="Static/Assets/MapBlue/mapbluescreen3.png" class="img-fluid" alt="Map Blue Screenshot Three">
+                        </div>
+                        <div class="col-sm-3">
+                            <img src="Static/Assets/MapBlue/mapbluescreen4.png" class="img-fluid" alt="Map Blue Screenshot Four">
+                        </div>
+                    </div>
+
+                    <hr id="video"/>
+
+                    <h2>Project Video</h2>
+                    <video width="960" height="540" preload="none" controls>
+                        <source src="Static/Assets/MapBlue/MapBlue.mp4"/>
+                        Your browser is unable to play this video.
+                    </video>
+
+                    <hr id="code">
+
+                    <!-- Gives the source code for Map Blue -->
+                    <h2>Map Blue Source Code</h2>
+                    <div>
+                        <!-- These are the buttons that change the tabs for the source code. By clicking a button, the user will change what source code is displayed. This is achieved by jQuery -->
+                        <div class="dropdown">
+                            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                BuildingViewController.swift
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <a class="dropdown-item" data-val="0">BuildingViewController.swift</a>
+                                <a class="dropdown-item" data-val="1">MapViewController.swift</a>
+                                <a class="dropdown-item" data-val="2">PrimaryMapViewController.swift</a>
+                                <a class="dropdown-item" data-val="3">RoomViewController.swift</a>
+                                <a class="dropdown-item" data-val="4">Point.swift</a>
+                            </div>
+                        </div>
+                        <!-- This is where the actual source code is displayed. The source code is displayed via jQuery injectin of the corresponding HTML page. -->
+                        <div id="active-source">
+                        </div>
+                    </div>
+
+                    <hr id="links"/>
+
+                    <h3>Links</h3>
+                    <!-- This image is used as a link to the github page for the Fate's Reprise. -->
+                    <div class="row">
+                        &nbsp;&nbsp;&nbsp;
+                        <a href="https://github.com/AkshaySG14/MapBlue" target="_blank">
+                            <i class="fa fa-github fa-4x" aria-hidden="true" title="Github Link"></i>
+                        </a>
+                        &nbsp;&nbsp;&nbsp;
+                        <!-- The download link for the source code. Note that for the other pages, the game/application itself is used (with the exception of Traffic Director) -->
+                        <a href="Static/Assets/MapBlue/MapBlue.zip" target="_blank">
+                            <i class="fa fa-download fa-4x" aria-hidden="true" title="Zip Download"></i>
+                        </a>
+                    </div>
+                    <br/>
+                </div>
+            </div>
+        </div>
+
+        <!-- Simple copyright + email address -->
+        <div class="footer text-center">
+            Copyright © Akshay Subramaniam -- Email Akshay.SG14@gmail.com for any issues
+        </div>
+
+        <script src="Static/js/main.js"></script>
+
+        <script>
+            $(function() {
+                // Gets the div that houses the source code.
+                const activeSource = $("#active-source");
+                // Initialize variable responsible for deciding source code to display.
+                var source = 0;
+
+                // Renews the PrismJS script so that the code is properly highlighted.
+                function renewPrism() {
+                    $('script[src="Static/js/prism.js"]').remove();
+                    $('<script>').attr('src', "Static/js/prism.js").appendTo('head');
+                }
+
+                // Script responsible for setting the text of the source code being displayed.
+                function setScript() {
+                    switch (parseInt(source)) {
+                        case 0:
+                            // Sends an async request to load the relevant source code, and then reinitializes the
+                            // highlighting script (prism.js).
+                            activeSource.load('Static/SourceCode/MapBlue/BuildingViewController.html', renewPrism);
+                            break;
+                        case 1:
+                            activeSource.load('Static/SourceCode/MapBlue/MapViewController.html', renewPrism);
+                            break;
+                        case 2:
+                            activeSource.load('Static/SourceCode/MapBlue/PrimaryMapViewController.html', renewPrism);
+                            break;
+                        case 3:
+                            activeSource.load('Static/SourceCode/MapBlue/RoomViewController.html', renewPrism);
+                            break;
+                        case 4:
+                            activeSource.load('Static/SourceCode/MapBlue/Point.html', renewPrism);
+                            break;
+                    }
+                }
+
+                // Clears all the HTML of the source code div.
+                function clearScript() {
+                    activeSource.html("");
+                }
+
+                // When clicking a specific source code to view in the dropdown bar.
+                $(".dropdown-item").click(function () {
+                    $('#dropdownMenuButton').text($(this).text());
+                    source = $(this).attr('data-val');
+                    clearScript();
+                    setScript();
+                });
+                // Sets initial source code.
+                setScript();
+            });
+        </script>
+    </body>
+</html>
